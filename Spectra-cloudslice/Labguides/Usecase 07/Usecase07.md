@@ -249,17 +249,17 @@ while adhering to its intended role
      ```  
 -**Starter prompts (3)**
 
-      ```
-       - I want to plan a multi-day travel itinerary
-      ```
-     
-      ```
-       - I want to rent a car at my travel destination
-      ```
-   
      ```
-      - I want to book a flight and hotel for my travels
-    ```
+        I want to plan a multi-day travel itinerary 
+     ```  
+     
+     ```
+       I want to rent a car at my travel destination
+     ```  
+     
+     ```
+       I want to book a flight and hotel for my travels
+     ``` 
 
 - Click on **Reset (4)**
 
@@ -267,11 +267,11 @@ while adhering to its intended role
 
 12. In the Test pane, enter the below and click **Send.**
 
-       ```
-       I want to plan a multi-day travel itinerary
-        ```
+     ```
+        I want to plan a multi-day travel itinerary 
+     ```  
 
-   ![](./media/us30.png)
+     ![](./media/us30.png)
 
 13. View the response. The agent will prompt you for additional information as instructed.
 
@@ -283,7 +283,8 @@ while adhering to its intended role
        Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my
        family (3 people total). We are vegetarian. We love sports, historic
        homes, art and food tours
-        ```
+
+      ```
 
        ![](./media/us32.png)
 
