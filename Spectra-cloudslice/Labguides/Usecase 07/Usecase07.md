@@ -507,19 +507,19 @@ and the Foundry project.
 
      ![](./media/usx14.png)
 
-2.  Click **Select Kernel** in the top-right corner of the notebook and choose the appropriate Python environment to run the lab.
+1.  Click **Select Kernel** in the top-right corner of the notebook and choose the appropriate Python environment to run the lab.
 
     ![](./media/usx15.png)
 
-3.  Select **Python Environments**
+1.  Select **Python Environments**
 
     ![](./media/usx16.png)
 
-4.  If prompted to select the path, then select the **Python** version  i.e **3.12.13**
+1.  If prompted to select the path, then select the **Python** version  i.e **3.12.13**
 
     ![](./media/usx17.png)
 
-5.  To install dependencies, run the first cell in the notebook
+1.  To install dependencies, run the first cell in the notebook
 
    ![](./media/usx18.png)
 
@@ -527,25 +527,25 @@ and the Foundry project.
    
    ![](./media/usx21.png)
 
-6.  Load and validate the environment variables from the shared .env  file by running the second cell in the notebook.
+1.  Load and validate the environment variables from the shared .env  file by running the second cell in the notebook.
 
    ![](./media/usx19.png)
 
    ![](./media/usx20.png)
 
-7.  Verify that you can connect to your Microsoft Foundry project using the SDK by running the 3^(rd) cell in the notebook.
+1.  Verify that you can connect to your Microsoft Foundry project using the SDK by running the 3^(rd) cell in the notebook.
 
    ![](./media/usx22.png)
 
    ![](./media/usx23.png)
 
-8.  Run the cell under **Validate OpenAI Client** to verify that your OpenAI client is correctly configured and responding.
+1.  Run the cell under **Validate OpenAI Client** to verify that your OpenAI client is correctly configured and responding.
 
    ![](./media/usx24.png)
 
    ![](./media/usx25.png)
 
-9.  Explore the Contoso Travel sample data by running the 5^(th), 6^(th), 7^(th) and 8^(th) cells in the notebook.
+1.  Explore the Contoso Travel sample data by running the 5^(th), 6^(th), 7^(th) and 8^(th) cells in the notebook.
 
     ![](./media/usx26.png)
     
@@ -564,55 +564,48 @@ Foundry SDK. You will initialize the required clients, create the agent,
 and interact with it through conversations to observe its behavior and
 responses.
 
-1.  Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and
-    open the **lab-02-agent.ipynb** notebook to begin the environment
+1. Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and  open the **lab-02-agent.ipynb** notebook to begin the environment
     setup lab.
 
-![](./media/image90.png)
+   ![](./media/usx31.png)
 
-2.  Click **Select Kernel**, then choose the **Python 3.12.13**
-    environment to run the Lab 02 notebook.
+1. Click **Select Kernel**, then choose the **Python 3.12.13**  environment to run the Lab 02 notebook.
 
-![](./media/image91.png)
+   ![](./media/usx32.png)
 
-3.  Load the environment variables and create the Azure AI Project
-    client by running the first cell in the notebook.
+1. Load the environment variables and create the Azure AI Project  client by running the first cell in the notebook.
 
-![](./media/image92.png)
+    ![](./media/usx33.png)
 
-> ![](./media/image93.png)
+    ![](./media/usx34.png)
 
-4.  To create the Concierge Agent, run the second cell in the notebook.
+1. To create the Concierge Agent, run the second cell in the notebook.
 
-![](./media/image94.png)
+    ![](./media/usx35.png)
 
-> ![](./media/image95.png)
+    ![](./media/usx36.png)
 
-5.  Run the cell under **Start a Conversation** to create a conversation
-    and send your first query to the agent.
+1. Run the cell under **Start a Conversation** to create a conversation and send your first query to the agent.
 
-![](./media/image96.png)
+   ![](./media/usx37.png)
 
-> ![](./media/image97.png)
+   ![](./media/usx38.png)
 
-6.  Run the cell under **Multi-Turn Conversation** to send a follow-up
-    query and observe how the agent maintains context across
-    interactions.
+1. Run the cell under **Multi-Turn Conversation** to send a follow-up query and observe how the agent maintains context across interactions.
 
-![](./media/image98.png)
+   ![](./media/usx39.png)
 
-> ![](./media/image99.png)
+   ![](./media/usx40.png)
 
-7.  Run the cell under **Explore the Response Object** to inspect the
-    structure and details of the agent’s response.
+1. Run the cell under **Explore the Response Object** to inspect the structure and details of the agent’s response.
 
-![](./media/image100.png)
+   ![](./media/usx41.png)
 
-> ![](./media/image101.png)
+   ![](./media/usx42.png)
 
-8.  Run the cell to delete the conversation and the agent version.
+1. Run the cell to delete the conversation and the agent version.
 
-![](./media/image102.png)
+   ![](./media/usx43.png)
 
 ### Task 4: Add Function Tools to Your Travel Agent
 
@@ -621,68 +614,61 @@ allow it to retrieve and process structured data. This enables the agent
 to handle more complex queries and provide more accurate and dynamic
 responses.
 
-1.  Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and
-    open the **lab-03a-tools.ipynb** notebook to begin the environment
+1. Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and  open the **lab-03a-tools.ipynb** notebook to begin the environment
     setup lab.
 
-![](./media/image103.png)
+   ![](./media/usx44.png)
 
-2.  Click **Select Kernel**, then choose the **Python 3.12.13**
-    environment to run the Lab 02 notebook.
+1. Click **Select Kernel**, then choose the **Python 3.12.13**  environment to run the Lab 02 notebook.
 
-> ![](./media/image104.png)
+   ![](./media/usx45.png)
 
-3.  Load the environment variables and create the Azure AI Project
-    client by running the first cell in the notebook.
+1. Load the environment variables and create the Azure AI Project client by running the first cell in the notebook.
 
-> ![](./media/image105.png)
+   ![](./media/usx46.png)
 
-4.  Run the cell under **Load the Travel Data** to load the CSV files
-    into DataFrames and verify the data is successfully loaded.
+1. Run the cell under **Load the Travel Data** to load the CSV files into DataFrames and verify the data is successfully loaded.
 
-![](./media/image106.png)
+   ![](./media/usx47.png)
 
-5.  Run the cell under **Define Tool Functions** to create the functions
-    that query travel data and return results in JSON format.
+1. Run the cell under **Define Tool Functions** to create the functions that query travel data and return results in JSON format.
 
-![](./media/image107.png)
+   ![](./media/usx48.png)
 
-![](./media/image108.png)
+   ![](./media/usx49.png)
 
-6.  Run the cell under **Register Function Tools** to define and
-    register the tool schemas that the agent will use to call functions.
+1. Run the cell under **Register Function Tools** to define and register the tool schemas that the agent will use to call functions.
 
-![](./media/image109.png)
+    ![](./media/usx50.png)
 
-![](./media/image110.png)
+    ![](./media/usx51.png)
 
-7.  Run the cell under **Create the Enhanced Travel Agent** to define
-    the agent instructions and create an agent with the registered
-    function tools attached.![](./media/image111.png)
+1. Run the cell under **Create the Enhanced Travel Agent** to define the agent instructions and create an agent with the registered function tools attached.
 
-![](./media/image112.png)
+    ![](./media/usx52.png)
 
-8.  Run the cell under **Test: Flight Search** to test the agent’s
-    ability to call the **search_flights** tool and return relevant
-    results.![](./media/image113.png)
+    ![](./media/usx53.png)
 
-![](./media/image114.png)
+1. Run the cell under **Test: Flight Search** to test the agent’s ability to call the **search_flights** tool and return relevantresults.
 
-9.  Run the cell under **Handle Function Call Responses** to execute the
-    tool call, send the results back to the agent, and generate the
-    final response.![](./media/image115.png)
+   ![](./media/usx54.png)
 
-10. Run the cell under **Test: Hotel + Car Combo** to test a multi-step
-    query where the agent calls multiple tools sequentially to provide
+   ![](./media/usx55.png)
+
+1. Run the cell under **Handle Function Call Responses** to execute the tool call, send the results back to the agent, and generate the final response.
+
+   ![](./media/usx56.png)
+
+1. Run the cell under **Test: Hotel + Car Combo** to test a multi-step query where the agent calls multiple tools sequentially to provide
     combined results.
 
-![](./media/image116.png)
+    ![](./media/usx57.png)
 
-![](./media/image117.png)
+    ![](./media/usx58.png)
 
-11. Run the final cell to delete the conversation and agent resources.
+1. Run the final cell to delete the conversation and agent resources.
 
-![](./media/image118.png)
+    ![](./media/usx59.png)
 
 ### Task 5: Build a Multi-Agent Travel Workflow
 
@@ -691,64 +677,52 @@ create specialized agents for different domains such as flights, hotels,
 and cars, and then combine them into a unified workflow that delivers a
 complete travel planning experience.
 
-1.  Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and
-    open the **lab-03b-workflow.ipynb** notebook to begin the
-    environment setup lab.
+1. Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and open the **lab-03b-workflow.ipynb** notebook to begin the environment setup lab.
 
-![](./media/image119.png)
+   ![](./media/usx60.png)
 
-2.  Click **Select Kernel**, then choose the **Python 3.12.13**
-    environment to run the Lab 02 notebook.
+1. Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 02 notebook.
 
-> ![](./media/image120.png)
+   ![](./media/usx61.png)
 
-3.  Run the first cell to import required libraries and initialize the
-    environment for workflow orchestration.
+1. Run the first cell to import required libraries and initialize the environment for workflow orchestration.
 
-> ![](./media/image121.png)
+   ![](./media/usx62.png)
 
-4.  Run the cell under **Create Specialist Agents** to create multiple
-    domain-specific agents (flight, hotel, and car) along with a
-    concierge agent that combines their results.
+1. Run the cell under **Create Specialist Agents** to create multiple domain-specific agents (flight, hotel, and car) along with a concierge agent that combines their results.
 
-![](./media/image122.png)
+   ![](./media/usx63.png)
 
-![](./media/image123.png)
+   ![](./media/usx64.png)
 
-5.  Run the cell under **Define the Workflow YAML** to create the
-    YAML-based workflow that orchestrates interactions between the
-    specialist agents and the concierge agent.
+1. Run the cell under **Define the Workflow YAML** to create the YAML-based workflow that orchestrates interactions between the specialist agents and the concierge agent.
 
-![](./media/image124.png)
+   ![](./media/usx65.png)
 
-![](./media/image125.png)
+   ![](./media/usx66.png)
 
-6.  Run the cell under **Create the Workflow Agent** to register the
-    workflow in Microsoft Foundry and create the workflow agent.
+1. Run the cell under **Create the Workflow Agent** to register the workflow in Microsoft Foundry and create the workflow agent.
 
-> ![](./media/image126.png)
+   ![](./media/usx67.png)
 
-7.  Run the cell under **Test: End-to-End Trip Planning** to execute the
-    workflow and observe how it orchestrates multiple agents to generate
+1. Run the cell under **Test: End-to-End Trip Planning** to execute the workflow and observe how it orchestrates multiple agents to generate
     a complete travel plan.
 
-> ![](./media/image127.png)
->
-> ![](./media/image128.png)
+   ![](./media/usx68.png)
 
-8.  Run the cell under **Retrieve & Combine Agent Responses** to fetch
-    the outputs from each specialist agent and combine them into a
-    unified response.
+   ![](./media/usx69.png)
 
-> ![](./media/image129.png)
->
-> ![](./media/image130.png)
+1. Run the cell under **Retrieve & Combine Agent Responses** to fetch the outputs from each specialist agent and combine them into a Unified response.
 
-12. Run the final cell to delete the conversation and agent resources.
+   ![](./media/usx70.png)
 
-> ![](./media/image131.png)
->
-> ![](./media/image132.png)
+   ![](./media/usx71.png)
+
+1. Run the final cell to delete the conversation and agent resources.
+
+   ![](./media/usx72.png)
+
+   ![](./media/usx73.png)
 
 ### Task 6: Trace Your Travel Agent
 
