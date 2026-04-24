@@ -23,12 +23,12 @@ JSON-based indexes to provide fast, relevant search results.
 
 1. In the Azure portal, go to the **top search bar**, enter **Microsoft Foundry (1)**, and from the results, choose **Microsoft Foundry (2)** under the **Services**.
 
-    ![A screenshot of a computer AI-generated content may be
+       ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-0.png)
 
 1. In the **Microsoft Foundry** page, expand **Use with Foundry (1)**, select **AI Search (2)**, and then click **+ Create (3)** to begin creating a new AI Search resource.
 
-    ![A screenshot of a computer AI-generated content may be
+       ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-1.png)
 
 1. On the **Create a search service** page under the **Basics** tab, provide the following details:
@@ -39,304 +39,304 @@ incorrect.](./media/uc1-1.png)
      - Verify that the **Pricing tier (4)** is set to **Standard** (default selection).
      - Click on **Review + create (5)** to validate the configuration and proceed with deployment.
 
-     ![A screenshot of a computer AI-generated content may be
+        ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-2.png) 
 
 1. On the **Review + create** tab, verify all the configured settings and then click **Create** to deploy the AI Search service.
 
-     ![A screenshot of a computer AI-generated content may be
+    ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-3.png) 
 
 1. Once the deployment is complete, click on **Go to resource** to navigate to the newly created AI Search service.
 
-     ![A screenshot of a computer AI-generated content may be
+    ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-4.png) 
 
 1. On the AI Search service **Overview** page, locate the **URL** under the **Essentials** section and click the **copy icon** next to it to copy the service endpoint for later use.
 
-     ![A screenshot of a computer AI-generated content may be
+    ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-5.png) 
 
-1. Open a browser and login to Azure portal at **<https://portal.azure.com/>** with your credentials.
+1. In the AI Search service, navigate to **Settings**, select **Keys**, and under **Manage admin keys**, click the **copy icon** next to the **Primary admin key** to copy it for later use.
 
-    - Username - **@lab.CloudPortalCredential>(User1).Username**
+   ![image](./media/uc1-6.png)
 
-    - Password - **@lab.CloudPortalCredential>(User1).Password**
+1. In the AI Search service, go to **Identity**, switch the **Status** to **On** to enable the system-assigned managed identity, and then click **Save** to apply the changes.
 
-From the Home page of the Azure portal, select **Microsoft Foundry** and
-select **Microsoft Foundry** under Services.
+   ![image](./media/uc1-7.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image1.png)
+1. In the confirmation dialog to enable the system-assigned managed identity, click **Yes** to proceed and register the identity with Microsoft Entra ID.
 
-2. In the **AI Foundry page**, select **AI Search** under **Use with AI
-    Foundry** from the left pane and then select **+ Create**.
-
-![A screenshot of a search engine AI-generated content may be
-incorrect.](./media/image2.png)
-
-3. Enter the below details and select **Review + create**.
-
-    - Subscription - Select your **assigned subscription**
-
-    - Resource group - Select your **assigned Resource
-      group** (**ResourceGroup1**)
-
-    - Storage account name -
-      **[**searchleaves@lab.LabInstance.Id**](mailto:searchleaves@lab.LabInstance.Id)**
-
-    - Location - Select @lab.CloudResourceGroup(ResourceGroup1).Location
-
-![A screenshot of a search service AI-generated content may be
-incorrect.](./media/image3.png)
-
-4. Once the validation passes, select **Create**.
-
-![A screenshot of a search engine AI-generated content may be
-incorrect.](./media/image4.png)
-
-5. The deployment takes around 10 minutes to complete. Select **Go to
-    resource** once the search service is created.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image5.png)
-
-6. From the **Overview** page, copy the **Url** value and save it in a
-    notepad to be used in a future exercise.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image6.png)
-
-7. Select **Keys** under **Settings** from the left pane. Copy
-    the **Primary admin key** and save it in a notepad for using it in
-    the upcoming exercises.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image7.png)
-
-8. Select **Identity** under **Settings** from the left pane.
-
-![A screenshot of a search engine AI-generated content may be
-incorrect.](./media/image8.png)
-
-9. Toggle the Status to **On** under **System assigned** and then click
-    on **Save**.
-
-![A screenshot of a search engine AI-generated content may be
-incorrect.](./media/image9.png)
-
-10. Select **Yes** in the **Enable system assigned managed
-    identity** confirmation dialog.
-
-![A screenshot of a computer error AI-generated content may be
-incorrect.](./media/image10.png)
+   ![image](./media/uc1-8.png)
 
 ## Exercise 2: Create a Storage account
 
-1. From the Azure portal Home page (**https://portal.azure.com/**),
-    select **Storage accounts**.
+1. In the Azure portal, go to the **top search bar**, enter **Storage accounts (1)**, and from the results, choose **Storage accounts (2)** under the **Services**.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image11.png)
+   ![image](./media/uc1-9.png)
 
-2. Select **+ Create** to create a new Storage account.
+1. On the **Storage accounts** page, click **+ Create** to begin creating a new storage account.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image12.png)
+   ![image](./media/uc1-10.png)
 
-3. Enter the below details, accept the default values in the other
-    fields and click on **Review + create**.
+1. On the **Create a storage account** page under the **Basics** tab, configure the required settings as follows:
 
-    - Subscription - Select your **assigned subscription**
+    - Select **Resource group**: **AgenticAI**
+    - Enter **Storage account name** (unique)
+    - Choose **Region**
+    - Set **Preferred storage type**: **Azure Blob Storage or ADLS Gen2**
+    - Keep **Performance**: **Standard**
+    - Set **Redundancy**: **LRS**
+    - Click **Review + create**
 
-    - Resource group - Select your **assigned Resource
-      group** (**ResourceGroup1**)
+       ![image](./media/uc1-11.png)
 
-    - Storage account name -
-      **[**leavepolicystg@lab.LabInstance.Id**](mailto:leavepolicystg@lab.LabInstance.Id)**
+1. On the **Review + create** tab, verify all the configured storage account settings and click **Create** to deploy the storage account.
 
-    - Region - Select @lab.CloudResourceGroup(ResourceGroup1).Location
+   ![image](./media/uc1-12.png)
 
-    - Primary service - Select **Azure Blob Storage or Azure Data Lake
-      Storage Gen 2**
+1. Once the deployment is complete, click **Go to resource** to open the newly created storage account.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image13.png)
+   ![image](./media/uc1-13.png)
 
-4. Once the validation passes, click on **Create**.
+1. In the storage account, navigate to **Data storage**, select **Containers**, and then click **+ Add container** to create a new container.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image14.png)
+   ![image](./media/uc1-14.png)
 
-5. Once the resource creation succeeds, click on **Go to resource**.
+1. In the **New container** pane, enter **document** as the **Name**, keep the access level as **Private**, and click **Create** to create the container.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image15.png)
+   ![image](./media/uc1-15.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image16.png)
+1. After the container is created, locate and select the **document** container from the list to open it.
 
-6. Select **Containers** under **Data storage**. Select **+
-    Container**, enter the name as ****document**** and click
-    on **Create** to create the container.
+   ![image](./media/uc1-16.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image17.png)
+1. In the **document** container, click **Upload**, then in the upload pane select **Browse for files**, choose the file you want to upload, and proceed with the upload.
 
-7. Select the created container **document** to upload the leave policy
-    document into it.
+   ![image](./media/uc1-17.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image18.png)
+1. Select the **LeavePolicy.docx** from **C:\Labfiles\LabFiles** and then click on **Upload**.
 
-8. Click on **Upload** and then select **Browse for files**.
+1. In the storage account, navigate to **Access Control (IAM)**, click **+ Add**, and select **Add role assignment** to begin assigning permissions.
 
-![A screenshot of a computer screen AI-generated content may be
-incorrect.](./media/image19.png)
+   ![image](./media/uc1-18.png)
 
-9. Select the **LeavePolicy.docx** from **C:\Labfiles\LabFiles** and
-    then click on **Upload**.
+1. In the **Add role assignment** pane, search for **Storage Blob Data Reader**, select the role from the list, and click **Next** to proceed.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image20.png)
+   ![image](./media/uc1-19.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image21.png)
+1. In the **Members** tab, keep **Assign access to** as **User, group, or service principal**, click **Select members**, search and choose the required user, click **Select**, and then proceed by clicking **Next**.
 
-10. Navigate to the
-    **[**leavepolicystg@lab.LabInstance.Id**](mailto:leavepolicystg@lab.LabInstance.Id)**
-    Storage account (Select **Storageaccounts** from the **Home
-    page** of the Azure portal and
-    select [**leavepolicystg@lab.LabInstance.Id**](mailto:leavepolicystg@lab.LabInstance.Id))
-    and select **Access Control (IAM)** from the left pane. Select **Add
-    -\> Add role assignment**.
+   ![image](./media/uc1-20.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image22.png)
+1. In the **Members** tab, select **Managed identity**, click **Select members**, choose **Search service** from the managed identity dropdown, select your AI Search service instance, and proceed to assign it.
 
-11. Search for ****Storage Blob Data Reader****, select it and click
-    on **Next**.
+   ![image](./media/uc1-22.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image23.png)
+1. In the **Select managed identities** pane, choose the **Search service** managed identity, select your AI Search service instance, and click **Select** to add it.
 
-12. Click on **+Select members**, search for and select your **user
-    name**, <**@lab.CloudPortalCredential>(User1).Username** and then
-    click on **Select**. This adds the Storage Blob Data Reader role to
-    your user id.
+   ![image](./media/uc1-23.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image24.png)
+1. In the **Add role assignment** pane, verify that both the required user and the **Search service managed identity** are listed under **Members**, then click **Review + assign** twice to complete the role assignment.
 
-13. Select **Managed identity** and then select **+ Select members**.
-    Select **Search service** under **Managed identity** and select
-    the **searchleaves** search service that gets listed.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image25.png)
-
-14. Click on **Select** to select the search service.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image26.png)
-
-15. Back in the Add role assignment screen, click on **Review +
-    assign**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image27.png)
-
-16. Select **Review + assign** again in the next screen.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image28.png)
-
-17. Proceed to the next step once the roles are added.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image29.png)
+   ![image](./media/uc1-24.png)
 
 In this exercise, we have created a Storage account and added the
 document and required Role permissions to it.
 
-**Exercise 3: Create an Azure OpenAI Service and deploy a model**
+## Exercise 3: Create an Azure OpenAI Service and deploy a model
 
-1. From the Azure portal Home page, search for and select **Azure
-    OpenAI**.
+1. In the Azure portal search bar, type **Azure OpenAI** (1), then select **Azure OpenAI** from the **Services** list (2) to open it.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image30.png)
+   ![image](./media/uc1-25.png)
 
-2. Select **+ Create**.
+1. In the **Azure OpenAI** page, click **+ Create** (1) and then select **Azure OpenAI** (2) from the dropdown to begin creating a new resource.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image31.png)
+   ![image](./media/uc1-26.png)
 
-3. Enter the below details and select **Next**.
+1. In the **Create Azure OpenAI** page, select **Resource group** as **AgenticAI** (1), choose the **Region** (2), enter a unique **Name** (3), keep the **Pricing tier** as **Standard S0** (4), and click **Next** (5) to proceed.
 
-    - Subscription - Select your **assigned subscription**
+   ![image](./media/uc1-27.png)
 
-    - Resource group - Select your **assigned Resource
-      group** (**ResourceGroup1**)
+1. On the **Review + submit** tab, verify all the configured details and click **Create** to deploy the Azure OpenAI resource.
 
-    - Region - Select @lab.CloudResourceGroup(ResourceGroup1).Location
+   ![image](./media/uc1-28.png)
 
-    - Name -
-      **[**openaiservice@lab.LabInstance.Id**](mailto:openaiservice@lab.LabInstance.Id)**
+1. Once the deployment is complete, click **Go to resource** to open the Azure OpenAI resource.
 
-    - Pricing tier - Select **Standard S0**
+   ![image](./media/uc1-29.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image32.png)
+1. In the Azure OpenAI resource, navigate to **Access control (IAM)** (1), click **+ Add** (2), and select **Add role assignment** (3) to assign permissions.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image33.png)
+   ![image](./media/uc1-30.png)
 
-4. Select **Next** in the next 2 screens select **Create** in
-    the **Review + submit** screen.
+1. In the **Add role assignment** pane, search for **Cognitive Services OpenAI User** (1), select the role from the list (2), and click **Next** (3) to continue.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image34.png)
+   ![image](./media/uc1-31.png)
 
-5. Click on **Go to resource** once the service is created.
+1. In the **Members** tab, keep **Assign access to** as **User, group, or service principal** (1), click **Select members** (2), search and select the required user (3–4), then click **Select** (5) and proceed.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image35.png)
+   ![image](./media/uc1-32.png)
 
-6. Select **Access control (IAM)** from the left pane, select **Add -\>
-    Add role assignment**.
+1. In the **Members** tab, select **Managed identity** (1), click **Select members** (2), choose **Search service** from the managed identity dropdown (3), select your AI Search service instance (4), and proceed.
 
-![](./media/image36.png)
+   ![image](./media/uc1-33.png)
 
-7. Search for ****Cognitive Services OpenAI User****, select the role
-    and click on **Next**.
+1. In the **Select managed identities** pane, confirm the selected **Search service** managed identity and click **Select** to add it.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image37.png)
+   ![image](./media/uc1-34.png)
 
-8. Select **+ Select members**, search for your **user
-    name**, <**@lab.CloudPortalCredential>(User1).Username**, select
-    it and click on **Select**.
+1. In the **Add role assignment** pane, verify that both the required user and the **Search service managed identity** are listed under **Members** (1), then click **Review + assign** (2) twice to complete the role assignment.
 
-![](./media/image38.png)
+   ![image](./media/uc1-35.png)
 
-9. Back in the **Add role assignment** screen, select **Managed
-    identity**. Then select **+ Select members**. In the **Select
-    managed identities** screen, select **Search
-    service** under **Managed identity** and select
-    the **seachleaves** service.
+1. On the Azure OpenAI resource page, click **Go to Foundry portal** to open the service in Microsoft Foundry.
 
-![A screenshot of a computer screen AI-generated content may be
-incorrect.](./media/image39.png)
+   ![image](./media/uc1-36.png)
 
-10. Once selected, click on **Select**.
+1. In the **Microsoft Foundry** portal, navigate to **Deployments** (1), click **+ Deploy model** (2), and select **Deploy base model** (3) to start deploying a model.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image40.png)
+   ![image](./media/uc1-37.png)
 
-11. Select **Review + assign** in the next 2 screens.
+1. In the **Select a model** pane, search for **text-embedding-3-large** (1), select the model from the list (2), and click **Confirm** (3) to proceed.
 
-![](./media/image41.png)
+   ![image](./media/uc1-38.png)
+
+1. In the **Deploy text-embedding-3-large** pane, keep the **Deployment type** as **Standard** (1) and click **Deploy** (2) to create the model deployment.
+
+   ![image](./media/uc1-39.png)
+
+## Exercise 4: Create a vector index
+
+1. Back in the Azure portal, open the **searchleaves** AI Search
+    service resource.
+
+1. On the AI Search service page, click **Import data** to start importing data into the search index.
+
+   ![image](./media/uc1-40.png)
+
+1. In the **Import data** pane, select **Azure Blob Storage** as the data source to proceed with importing data.
+
+   ![image](./media/uc1-41.png)
+
+1. In the **Import data** workflow, select **RAG** as the scenario to enable AI-powered search over your data.
+
+   ![image](./media/uc1-42.png)
+
+1. In the **Configure your Azure Blob Storage** step, select the **Storage account** (1), choose the **Blob container** as **document** (2), and click **Next** (3) to proceed.
+
+   ![image](./media/uc1-43.png)
+
+1. In the **Vectorize your text** step, configure the following:
+
+    * Set **Kind** to **Azure OpenAI** (1)
+    * Select your **Subscription** (2)
+    * Choose the **Azure OpenAI service** (3)
+    * Set **Model deployment** to **text-embedding-3-large** (4)
+    * Select **System assigned identity** for authentication (5)
+    * Click **Next** (6) to proceed
+
+       ![image](./media/uc1-44.png)
+
+1. In the **Vectorize and enrich your images** step, leave the default options unchanged (no selection) and click **Next** to proceed.
+
+   ![image](./media/uc1-45.png)
+
+1. In the **Vectorize and enrich your images** step, leave the default options unchanged (no selection) and click **Next** to proceed.
+
+   ![image](./media/uc1-46.png)
+
+1. In the **Review and create** step, verify the configuration details and click **Create** to complete the RAG setup.
+
+   ![image](./media/uc1-47.png)
+
+1. Once the setup is complete, click **Close** to view and test your indexed data.
+
+   ![image](./media/uc1-48.png)
+
+## Exercise 5: Create a knowledge assistant agent
+
+1. Open a new broser and login to
+    **[https://copilotstudio.microsoft.com**](https://copilotstudio.microsoft.com**/) using your login credentials.
+
+1. Select **Get Started** in the Welcome to Microsoft Copilot Studio.
+
+   ![image](./media/image58.png)
+
+   ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image59.png)
+
+1. Select Agents from the left pane. Enter **You are a Knowledge
+    assistant agent for HR who will answer questions related to leaves
+    and leave policies to the employees.** and select **Send**.
+
+   ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image60.png)
+
+1. Once the agent is created, in the Test pane, enter **How many days
+    of Maternity leaves can I avail?** and click **Send.**
+
+   ![image](./media/image61.png)
+
+1. It gives a generalized reply as in the screenshot below.
+
+   ![image](./media/image62.png)
+
+## Exercise 6: Add the Azure AI Search as a knowledge source
+
+1. From the **Overview** page of the agent, select **Add knowledge**.
+
+      ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image63.png)
+
+1. Select Azure AI Search from the list of knowledge sources available.
+
+   ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image64.png)
+
+1. Click on the **drop down** next to **Not connected** in the next
+    screen and select **Create new connection**.
+
+   ![A screenshot of a search engine AI-generated content may be
+incorrect.](./media/image65.png)
+
+1. Enter the **Endpoint url** and the **Admin key** values which we
+    saved to a notepad in a previous exercise and then click
+    on **Create** to create the connection.
+
+   ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image66.png)
+
+1. Once the connection is established, the available index is listed
+    and already selected. Click on **Add to agent**.
+
+   ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image67.png)
+
+1. The AI Search service is added as a knowledge source to the agent
+    and is in **Ready** state now. Ensure that the **Web search** option
+    is **disabled** in the Knowledge section.
+
+   ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image68.png)
+
+1. Now, let us test the agent with the same question we tried before.
+
+1. In the Test pane, enter **How many days of Maternity leaves can I
+    avail?** and click **Send.**
+
+   ![image](./media/image69.png)
+
+1. You can see that the response from the agent now is from the
+    document uploaded in the AI Search service.
+
+   ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/image70.png)
+
+**Summary:**
+
+In this lab, we have learnt to connect the agent to a Azure AI Search
+service as a knowledge source and test the agent based on the source.
 
 12. Wait for a **success** message on the role additions before
     proceeding with the next tasks.

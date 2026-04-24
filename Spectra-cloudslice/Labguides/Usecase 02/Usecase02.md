@@ -40,317 +40,239 @@ relies on different systems and processes, resulting in:
 
 - Limited scalability of automation initiatives
 
-To overcome these challenges, Contoso implements a **multi-agent AI
-system** where:
+To overcome these challenges, Contoso implements a **multi-agent AI system** where:
 
-Multi-Agent Workflow
+**Multi-Agent Workflow**
 
-1.  **User Request Intake Agent**  
-    Captures business queries (e.g., “Approve supplier contract” or
-    “Analyze sales performance”).
+1. **User Request Intake Agent**  
+    Captures business queries (e.g., "Approve supplier contract" or
+    "Analyze sales performance").
 
-2.  **Planning Agent**  
+2. **Planning Agent**  
     Breaks down the request into smaller executable tasks.
 
-3.  **Data Retrieval Agent**  
+3. **Data Retrieval Agent**  
     Fetches relevant data from enterprise systems (ERP, CRM, data
     warehouses).
 
-4.  **Reasoning Agent**  
+4. **Reasoning Agent**  
     Applies AI models to analyze data and generate insights.
 
-5.  **Validation Agent**  
+5. **Validation Agent**  
     Ensures accuracy, compliance, and business rule alignment.
 
-6.  **Execution Agent**  
+6. **Execution Agent**  
     Triggers actions such as approvals, notifications, or report
     generation.
 
 **Prerequisites**
 
-- **GitHub Account**: You are expected to have your own GitHub login
-  credentials.  
-  If you do not have an account, please create one by visiting:  
-  <https://github.com/signup>
+- **GitHub Account**: You are expected to have your own GitHub login credentials. If you do not have an account, please create one by visiting: <https://github.com/signup
 
 ## Task 1: Register Service provider
 
-1.  Open a browser go to +++https://portal.azure.com+++ and sign in with
-    your cloud slice account below.
+1. In the Azure portal search bar, type **Subscriptions** (1), then select **Subscriptions** from the **Services** list (2) to open it.
 
-> Username: <+++@lab.CloudPortalCredential>(User1).Username+++
->
-> Password: <+++@lab.CloudPortalCredential>(User1). *TAP*+++
->
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image1.png)
->
-> ![A login box with a red box and blue box with text AI-generated
-> content may be incorrect.](./media/image2.png)
+1. On the **Subscriptions** page, select the required subscription (e.g., **Sandbox AI DS**) from the list to open its details.
 
-2.  Click on **Subscriptions** tile.
+1. In the selected subscription, navigate to **Settings** (1), select **Resource providers** (2), search for **Microsoft.CognitiveServices** (3), and select it from the list (4).
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image3.png)
+1. Repeat the step 3 to register the following Resource provider.
 
-3.  Click on the subscription name.
+    - **Microsoft.AlertsManagement**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image4.png)
+    - **Microsoft.App**
 
-4.  Expand Settings from the left navigation menu. Click on **Resource
-    providers**, enter **+++** **Microsoft.CognitiveServices+++** and
-    select it, and then click **Register**.
+    - **Microsoft.ContainerRegistry**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image5.png)
+    - **Microsoft.OperationalInsights**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image6.png)
+    - **Microsoft.Insights**
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image7.png)
+## Task 2: Retrieve resource group name and location
 
-5.  Repeat the steps \#4 to register the following Resource provider.
+1. In the Azure portal search bar, type **Resource groups** (1), then select **Resource groups** from the **Services** list (2) to open it.
 
-- +++**Microsoft.AlertsManagement**+++
+2. Click on your assigned **Resource group**.
 
-- +++Microsoft.App+++
+      ![](./media/image18.png)
 
-- +++Microsoft.ContainerRegistry+++
-
-- +++Microsoft.OperationalInsights+++
-
-- +++Microsoft.Insights+++
-
-![](./media/image8.png)
-
-## Task 2: Assign Contributor Role
-
-1.  Select **Subscriptions**.
-
-![](./media/image9.png)
-
-2.  From the left menu, click on the **Access control(IAM).**
-
-3.  On the Access control(IAM) page, Click +**Add** and select **Add
-    role assignments.**
-
-![](./media/image10.png)
-
-4.  In the Azure “Add role assignment” page, the **Contributor** role is
-    selected under **Privileged administrator roles**, and the user
-    proceeds by clicking **Next** to continue the assignment
-    process.![](./media/image11.png)
-
-5.  In the **Add role assignment** tab, select Assign access to User
-    group or service principal. Under Members, click **+Select members**
-
-> ![](./media/image12.png)
-
-6.  On the Select members tab , search your subscription and
-    click **Select.**
-
-> ![](./media/image13.png)
-
-7.  In the **Add role assignment** page, Click **Review + Assign**, you
-    will get a notification once the role assignment is complete.
-
-> ![](./media/image14.png)
->
-> ![](./media/image15.png)
-
-8.  You will see a notification
-
-![](./media/image16.png)
-
-## Task 3: Retrieve resource group name and location
-
-1.  Type in +++**Resource group+++** in the search bar and
-    select **Resource groups**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image17.png)
-
-2.  Click on your assigned **Resource group**.
-
-![](./media/image18.png)
-
-3.  In **Resource group** page, copy **resource group name and
-    location** and paste them in a notepad, then **Save** the notepad to
+3. In **Resource group** page, copy **resource group name and
+    location** and paste them in a notepad, then **Save** the notepad to
     use the information in the upcoming tasks.
 
-![](./media/image19.png)
+## Task 3: Open Github Codespaces environment
 
-## Task 4: Open Github Codespaces environment
+1. Open your browser, navigate to the address bar, type or paste the
+    following URL: 
 
-1.  Open your browser, navigate to the address bar, type or paste the
-    following URL: 
+    ```
+    https://github.com/technofocus-pte/MultiAgent-Solution-Accelerator.git
+    ```
 
-+++https://github.com/technofocus-pte/MultiAgent-Solution-Accelerator.git+++
+    ![](./media/uc2-22.png)
 
-![](./media/image20.png)
+1. Click on **Fork** (top-right corner) to create your own copy of the repository.
 
-2.  Click on **fork** to fork the repo. Give unique name to the repo and
-    click on **Create repo** button.
+    ![](./media/uc2-23.png)
 
-> ![](./media/image21.png)
+1. Click on **fork** to fork the repo. Give unique name to the repo and click on **Create repo** button.
 
-![](./media/image22.png)
+    ![](./media/uc2-25.png) 
 
-3.  Click on **Code -\> Codespaces -\> Codespaces+**
+1. Click on **Code**, switch to the **Codespaces** tab, and select **Create codespace on main** to launch the development environment.
 
-![](./media/image23.png)
+    ![](./media/uc2-26.png) 
 
-4.  Wait for the Codespaces environment to setup. It takes few minutes
+1. Wait for the Codespaces environment to setup. It takes few minutes
     to setup completely
 
-![](./media/image24.png)
+      ![](./media/image24.png)
 
-![](./media/image25.png)
+      ![](./media/image25.png)
 
-5.  The environment is now ready for resource deployment.
+1. The environment is now ready for resource deployment.
 
-> ![](./media/image26.png)
+       ![](./media/image26.png)
 
-## Task 5: Provision Services and deploy application to Azure
+## Task 4: Provision Services and deploy application to Azure
 
-1.  Run the following command on the Terminal. It generates the code to
+1. Run the following command on the Terminal. It generates the code to
     copy. Copy the code and press Enter.
 
-> +++azd auth login+++
->
-> ![](./media/image27.png)
+ **azd auth login**
 
-2.  Run the azd auth login command, copy the displayed authentication
+       ![](./media/image27.png)
+
+2. Run the azd auth login command, copy the displayed authentication
     code, and complete the sign-in process in your browser to
     authenticate your environment.
 
-> ![](./media/image28.png)
+       ![](./media/image28.png)
 
-3.  Default browser opens to enter the generated code to verify. Enter
-    the code and click **Next**.
+3. Default browser opens to enter the generated code to verify. Enter
+    the code and click **Next**.
 
-> ![](./media/image29.png)
+       ![](./media/image29.png)
 
-4.  Sign in with your Azure credentials.
+4. Sign in with your Azure credentials.
 
-> ![](./media/image30.png)
->
-> ![](./media/image31.png)
->
-> ![](./media/image32.png)
+      ![](./media/image30.png)
 
-9.  Run the az login command, copy the displayed authentication code,
+       ![](./media/image31.png)
+
+       ![](./media/image32.png)
+
+9. Run the az login command, copy the displayed authentication code,
     and complete the sign-in process in your browser to authenticate
     your environment.
 
-> ![](./media/image33.png)
+       ![](./media/image33.png)
 
-![](./media/image34.png)
+      ![](./media/image34.png)
 
-![](./media/image30.png)
+      ![](./media/image30.png)
 
-![](./media/image35.png)
+      ![](./media/image35.png)
 
-10. Run azd up - This will provision Azure resources
+10. Run azd up - This will provision Azure resources
 
-![](./media/image36.png)
+      ![](./media/image36.png)
 
 11. Enter any name of your choice and press enter (eg
-    :+++prior-auth-devXXXX+++)
+    :**prior-auth-devXXXX**)
 
-![](./media/image37.png)
+      ![](./media/image37.png)
 
-![](./media/image38.png)
+      ![](./media/image38.png)
 
 12. Select below values.
 
-- **Select an Azure Subscription to use** : Select your subscription
+- **Select an Azure Subscription to use** : Select your subscription
 
-- **Enter a value for existingResourceGroup Name:** existing resource
+- **Enter a value for existingResourceGroup Name:** existing resource
   group
 
 - **Enter location**: Sweden Central
 
-![](./media/image39.png)
+      ![](./media/image39.png)
 
-![](./media/image40.png)
+      ![](./media/image40.png)
 
-![](./media/image41.png)
+      ![](./media/image41.png)
 
 13. Enter **Y** to proceed with the deployment.
 
-![](./media/image42.png)
+      ![](./media/image42.png)
 
-![](./media/image43.png)
+      ![](./media/image43.png)
 
-![](./media/image44.png)
+      ![](./media/image44.png)
 
-![](./media/image45.png)
+      ![](./media/image45.png)
 
 14. The deployment process is currently building container images using
     a remote Azure Container Registry (ACR) build.
 
-![](./media/image46.png)
+      ![](./media/image46.png)
 
-![](./media/image47.png)
+      ![](./media/image47.png)
 
 15. The frontend container image has been built successfully, and the
     agent-clinical image build process has started in Azure Container
     Registry (ACR).
 
-![](./media/image48.png)
+      ![](./media/image48.png)
 
 16. Agent-clinical image build process completed and building
     agent-coverage build process has started in Azure Container Registry
     (ACR).
 
-![](./media/image49.png)
+      ![](./media/image49.png)
 
 17. Agent-coverage image build process completed and building
     agent-compliance build process has started in Azure Container
     Registry (ACR).
 
-> ![](./media/image50.png)
+       ![](./media/image50.png)
 
 18. Agent-compliance image build process completed and building
     agent-synthesis build process has started in Azure Container
     Registry (ACR).
 
-![](./media/image51.png)
+      ![](./media/image51.png)
 
 19. Agent-synthesis image build process completed
 
-![](./media/image52.png)
+      ![](./media/image52.png)
 
 20. Backend and frontend container app updated sucessfully
 
-> ![](./media/image53.png)
+       ![](./media/image53.png)
 
 21. The agent-synthesis image has been built successfully, container
     apps have been updated, required roles have been ensured, and
     Foundry MCP tool connections have been created successfully.
 
-> ![](./media/image54.png)
+       ![](./media/image54.png)
 
 22. The deployment has completed successfully, and the frontend and
     backend application URLs, along with the backend health check
     endpoint, are now available for access.
 
-> ![](./media/image55.png)
+       ![](./media/image55.png)
 
-## Task 6: Verify deployed resources in the Azure portal
+## Task 5: Verify deployed resources in the Azure portal
 
-1.  Select **Resource groups**
+1. Select **Resource groups**
 
-> ![](./media/image56.png)
+       ![](./media/image56.png)
 
-2.  Click on your assigned **Resource group**.
+2. Click on your assigned **Resource group**.
 
-![](./media/image57.png)
+      ![](./media/image57.png)
 
-3.  Make sure the below resource got deployed successfully
+3. Make sure the below resource got deployed successfully
 
 - Foundry
 
@@ -362,126 +284,126 @@ incorrect.](./media/image17.png)
 
 - Container App Environment
 
-![](./media/image58.png)
+      ![](./media/image58.png)
 
-4.  Click on **Foundry Project.**
+4. Click on **Foundry Project.**
 
-![](./media/image58.png)
+      ![](./media/image58.png)
 
-5.  Click **Go to Foundry portal** to verify that the agents has been
+5. Click **Go to Foundry portal** to verify that the agents has been
     successfully deployed.
 
-![](./media/image59.png)
+      ![](./media/image59.png)
 
-6.  In Microsoft Foundry, navigate to the **Build** section from the top
+6. In Microsoft Foundry, navigate to the **Build** section from the top
     menu to start creating and managing your AI solutions.
 
-![](./media/image60.png)
+      ![](./media/image60.png)
 
-7.  Agents has been successfully deployed
+7. Agents has been successfully deployed
 
-![](./media/image61.png)
+      ![](./media/image61.png)
 
-8.  Select the **synthesis-agent**.
+8. Select the **synthesis-agent**.
 
-![](./media/image61.png)
+      ![](./media/image61.png)
 
-9.  Click on **Start agent deployment** to deploy the synthesis-agent.
+9. Click on **Start agent deployment** to deploy the synthesis-agent.
 
-![](./media/image62.png)
+      ![](./media/image62.png)
 
-![](./media/image63.png)
+      ![](./media/image63.png)
 
 10. Select the **compliance-agent**.
 
-![](./media/image64.png)
+      ![](./media/image64.png)
 
 11. Click on **Start agent deployment** to deploy the
     **compliance-agent**.
 
-![](./media/image65.png)
+      ![](./media/image65.png)
 
-![](./media/image66.png)
+      ![](./media/image66.png)
 
 12. Repeat steps 10 and 11 to run the **coverage-assessment-agent** and
     **clinical-reviewer-agent**.
 
-![](./media/image67.png)
+      ![](./media/image67.png)
 
-![](./media/image68.png)
+      ![](./media/image68.png)
 
-![](./media/image69.png)
+      ![](./media/image69.png)
 
-## **Task 7: Test the Application**
+## Task 6: Test the Application
 
-1.  Go back to the codespace and copy the **Frontend URL**; it will be
+1. Go back to the codespace and copy the **Frontend URL**; it will be
     used later to launch the application.
 
-![](./media/image70.png)
+      ![](./media/image70.png)
 
-2.  Run the command +++python scripts/check_agents.py+++ to verify agent
+2. Run the command **python scripts/check_agents.py** to verify agent
     connections and application health status.
 
-![](./media/image71.png)
+      ![](./media/image71.png)
 
-![](./media/image72.png)
+      ![](./media/image72.png)
 
-3.  Run the check_agents.py script to verify agent registration, backend
+3. Run the check_agents.py script to verify agent registration, backend
     health, frontend availability, and tool connections, ensuring all
     checks pass successfully before proceeding with PA request
     submission.
 
-+++python scripts/check_agents.py --version 1+++
+**python scripts/check_agents.py --version 1**
 
-![](./media/image73.png)
+      ![](./media/image73.png)
 
 13. Run the check_agents.py --poll command to continuously monitor agent
     status, ensuring all components like registration, tool connections,
     backend health, and frontend availability remain healthy before
     submitting PA requests.
 
-+++python scripts/check_agents.py –poll+++
+**python scripts/check_agents.py –poll**
 
-![](./media/image74.png)
+      ![](./media/image74.png)
 
 14. Click on **Frontend**
 
-![](./media/image74.png)
+      ![](./media/image74.png)
 
-4.  Click on **Open** button
+4. Click on **Open** button
 
-![](./media/image75.png)
+      ![](./media/image75.png)
 
-![](./media/image76.png)
+      ![](./media/image76.png)
 
-5.  Click **"Load Sample Case"** to populate the form with demo data
+5. Click **"Load Sample Case"** to populate the form with demo data
 
-![](./media/image77.png)
+      ![](./media/image77.png)
 
-6.  Click **"Submit for Review"**
+6. Click **"Submit for Review"**
 
-![](./media/image78.png)
+      ![](./media/image78.png)
 
-7.  Monitor the progress tracker — you should see all 5 phases complete
+7. Monitor the progress tracker — you should see all 5 phases complete
 
-![](./media/image79.png)
+      ![](./media/image79.png)
 
-![](./media/image80.png)
+      ![](./media/image80.png)
 
-8.  Review the agent results in the dashboard tabs (Compliance,
+8. Review the agent results in the dashboard tabs (Compliance,
     Clinical, Coverage)
 
-![](./media/image81.png)
+      ![](./media/image81.png)
 
 15. Click **Accept Recommendation**
 
-![](./media/image82.png)
+      ![](./media/image82.png)
 
-![](./media/image83.png)
+      ![](./media/image83.png)
 
-![](./media/image84.png)
+      ![](./media/image84.png)
 
-![](./media/image85.png)
+      ![](./media/image85.png)
 
 **Summary**
 
