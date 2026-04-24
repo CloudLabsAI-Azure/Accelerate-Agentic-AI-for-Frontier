@@ -95,7 +95,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 2. Click on your assigned **Resource group**.
 
-      ![](./media/image18.png)
+    ![](./media/image18.png)
 
 3. In **Resource group** page, copy **resource group name and
     location** and paste them in a notepad, then **Save** the notepad to
@@ -127,13 +127,13 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 1. Wait for the Codespaces environment to setup. It takes few minutes
     to setup completely
 
-      ![](./media/image24.png)
+     ![](./media/image24.png)
 
-      ![](./media/image25.png)
+     ![](./media/image25.png)
 
 1. The environment is now ready for resource deployment.
 
-       ![](./media/image26.png)
+     ![](./media/image26.png)
 
 ## Task 4: Provision Services and deploy application to Azure
 
@@ -142,49 +142,49 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
  **azd auth login**
 
-       ![](./media/image27.png)
+     ![](./media/image27.png)
 
 2. Run the azd auth login command, copy the displayed authentication
     code, and complete the sign-in process in your browser to
     authenticate your environment.
 
-       ![](./media/image28.png)
+     ![](./media/image28.png)
 
 3. Default browser opens to enter the generated code to verify. Enter
     the code and click **Next**.
 
-       ![](./media/image29.png)
+     ![](./media/image29.png)
 
 4. Sign in with your Azure credentials.
 
-      ![](./media/image30.png)
+    ![](./media/image30.png)
 
-       ![](./media/image31.png)
+     ![](./media/image31.png)
 
-       ![](./media/image32.png)
+     ![](./media/image32.png)
 
 9. Run the az login command, copy the displayed authentication code,
     and complete the sign-in process in your browser to authenticate
     your environment.
 
-       ![](./media/image33.png)
+     ![](./media/image33.png)
 
-      ![](./media/image34.png)
+    ![](./media/image34.png)
 
-      ![](./media/image30.png)
+    ![](./media/image30.png)
 
-      ![](./media/image35.png)
+    ![](./media/image35.png)
 
 10. Run azd up - This will provision Azure resources
 
-      ![](./media/image36.png)
+    ![](./media/image36.png)
 
 11. Enter any name of your choice and press enter (eg
     :**prior-auth-devXXXX**)
 
-      ![](./media/image37.png)
+    ![](./media/image37.png)
 
-      ![](./media/image38.png)
+    ![](./media/image38.png)
 
 12. Select below values.
 
@@ -195,82 +195,82 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 - **Enter location**: Sweden Central
 
-      ![](./media/image39.png)
+    ![](./media/image39.png)
 
-      ![](./media/image40.png)
+    ![](./media/image40.png)
 
-      ![](./media/image41.png)
+    ![](./media/image41.png)
 
 13. Enter **Y** to proceed with the deployment.
 
-      ![](./media/image42.png)
+    ![](./media/image42.png)
 
-      ![](./media/image43.png)
+    ![](./media/image43.png)
 
-      ![](./media/image44.png)
+    ![](./media/image44.png)
 
-      ![](./media/image45.png)
+    ![](./media/image45.png)
 
 14. The deployment process is currently building container images using
     a remote Azure Container Registry (ACR) build.
 
-      ![](./media/image46.png)
+    ![](./media/image46.png)
 
-      ![](./media/image47.png)
+    ![](./media/image47.png)
 
 15. The frontend container image has been built successfully, and the
     agent-clinical image build process has started in Azure Container
     Registry (ACR).
 
-      ![](./media/image48.png)
+    ![](./media/image48.png)
 
 16. Agent-clinical image build process completed and building
     agent-coverage build process has started in Azure Container Registry
     (ACR).
 
-      ![](./media/image49.png)
+    ![](./media/image49.png)
 
 17. Agent-coverage image build process completed and building
     agent-compliance build process has started in Azure Container
     Registry (ACR).
 
-       ![](./media/image50.png)
+     ![](./media/image50.png)
 
 18. Agent-compliance image build process completed and building
     agent-synthesis build process has started in Azure Container
     Registry (ACR).
 
-      ![](./media/image51.png)
+    ![](./media/image51.png)
 
 19. Agent-synthesis image build process completed
 
-      ![](./media/image52.png)
+    ![](./media/image52.png)
 
 20. Backend and frontend container app updated sucessfully
 
-       ![](./media/image53.png)
+     ![](./media/image53.png)
 
 21. The agent-synthesis image has been built successfully, container
     apps have been updated, required roles have been ensured, and
     Foundry MCP tool connections have been created successfully.
 
-       ![](./media/image54.png)
+     ![](./media/image54.png)
 
 22. The deployment has completed successfully, and the frontend and
     backend application URLs, along with the backend health check
     endpoint, are now available for access.
 
-       ![](./media/image55.png)
+     ![](./media/image55.png)
 
 ## Task 5: Verify deployed resources in the Azure portal
 
 1. Select **Resource groups**
 
-       ![](./media/image56.png)
+     ![](./media/image56.png)
 
 2. Click on your assigned **Resource group**.
 
-      ![](./media/image57.png)
+    ![](./media/image57.png)
 
 3. Make sure the below resource got deployed successfully
 
@@ -284,69 +284,69 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 - Container App Environment
 
-      ![](./media/image58.png)
+    ![](./media/image58.png)
 
 4. Click on **Foundry Project.**
 
-      ![](./media/image58.png)
+    ![](./media/image58.png)
 
 5. Click **Go to Foundry portal** to verify that the agents has been
     successfully deployed.
 
-      ![](./media/image59.png)
+    ![](./media/image59.png)
 
 6. In Microsoft Foundry, navigate to the **Build** section from the top
     menu to start creating and managing your AI solutions.
 
-      ![](./media/image60.png)
+    ![](./media/image60.png)
 
 7. Agents has been successfully deployed
 
-      ![](./media/image61.png)
+    ![](./media/image61.png)
 
 8. Select the **synthesis-agent**.
 
-      ![](./media/image61.png)
+    ![](./media/image61.png)
 
 9. Click on **Start agent deployment** to deploy the synthesis-agent.
 
-      ![](./media/image62.png)
+    ![](./media/image62.png)
 
-      ![](./media/image63.png)
+    ![](./media/image63.png)
 
 10. Select the **compliance-agent**.
 
-      ![](./media/image64.png)
+    ![](./media/image64.png)
 
 11. Click on **Start agent deployment** to deploy the
     **compliance-agent**.
 
-      ![](./media/image65.png)
+    ![](./media/image65.png)
 
-      ![](./media/image66.png)
+    ![](./media/image66.png)
 
 12. Repeat steps 10 and 11 to run the **coverage-assessment-agent** and
     **clinical-reviewer-agent**.
 
-      ![](./media/image67.png)
+    ![](./media/image67.png)
 
-      ![](./media/image68.png)
+    ![](./media/image68.png)
 
-      ![](./media/image69.png)
+    ![](./media/image69.png)
 
 ## Task 6: Test the Application
 
 1. Go back to the codespace and copy the **Frontend URL**; it will be
     used later to launch the application.
 
-      ![](./media/image70.png)
+    ![](./media/image70.png)
 
 2. Run the command **python scripts/check_agents.py** to verify agent
     connections and application health status.
 
-      ![](./media/image71.png)
+    ![](./media/image71.png)
 
-      ![](./media/image72.png)
+    ![](./media/image72.png)
 
 3. Run the check_agents.py script to verify agent registration, backend
     health, frontend availability, and tool connections, ensuring all
@@ -355,7 +355,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 **python scripts/check_agents.py --version 1**
 
-      ![](./media/image73.png)
+    ![](./media/image73.png)
 
 13. Run the check_agents.py --poll command to continuously monitor agent
     status, ensuring all components like registration, tool connections,
@@ -364,46 +364,46 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 **python scripts/check_agents.py –poll**
 
-      ![](./media/image74.png)
+    ![](./media/image74.png)
 
 14. Click on **Frontend**
 
-      ![](./media/image74.png)
+    ![](./media/image74.png)
 
 4. Click on **Open** button
 
-      ![](./media/image75.png)
+    ![](./media/image75.png)
 
-      ![](./media/image76.png)
+    ![](./media/image76.png)
 
 5. Click **"Load Sample Case"** to populate the form with demo data
 
-      ![](./media/image77.png)
+    ![](./media/image77.png)
 
 6. Click **"Submit for Review"**
 
-      ![](./media/image78.png)
+    ![](./media/image78.png)
 
 7. Monitor the progress tracker — you should see all 5 phases complete
 
-      ![](./media/image79.png)
+    ![](./media/image79.png)
 
-      ![](./media/image80.png)
+    ![](./media/image80.png)
 
 8. Review the agent results in the dashboard tabs (Compliance,
     Clinical, Coverage)
 
-      ![](./media/image81.png)
+    ![](./media/image81.png)
 
 15. Click **Accept Recommendation**
 
-      ![](./media/image82.png)
+    ![](./media/image82.png)
 
-      ![](./media/image83.png)
+    ![](./media/image83.png)
 
-      ![](./media/image84.png)
+    ![](./media/image84.png)
 
-      ![](./media/image85.png)
+    ![](./media/image85.png)
 
 **Summary**
 
