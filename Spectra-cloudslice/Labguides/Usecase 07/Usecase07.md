@@ -443,11 +443,11 @@ Codespace, and prepare your workspace for development.
                
     ```
 
-     ![](./media/image58.png)
+     ![](./media/usx1.png)
 
 1. Click on **fork** to fork the repo. 
 
-    ![](./media/usx3.png)
+    ![](./media/usx2.png)
 
 1. Give the name to the repo as **Foundry-Control-<inject key="DeploymentID" enableCopy="false"/> (1)** and click on **Create Fork (2)** .
 
