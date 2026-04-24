@@ -731,115 +731,81 @@ using telemetry and monitoring tools. You will analyze execution flows,
 inspect trace spans, and gain insights into how your agent processes
 requests.
 
-1.  Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and
-    open the **lab-04-tracing.ipynb** notebook to begin the environment
-    setup lab.
+1. Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and open the **lab-04-tracing.ipynb** notebook to begin the environment setup lab.
 
-> ![](./media/image133.png)
+    ![](./media/usx74.png)
 
-2.  Click **Select Kernel**, then choose the **Python 3.12.13**
-    environment to run the Lab 02 notebook.
+1. Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 02 notebook.
 
-> ![](./media/image134.png)
+    ![](./media/usx75.png)
 
-3.  Run the cell under **Setup** to load environment variables and
-    enable GenAI tracing for observability.
+1. Run the cell under **Setup** to load environment variables and enable GenAI tracing for observability.
 
-> ![](./media/image135.png)
+    ![](./media/usx76.png)
 
-4.  Run the cell to configure **OpenTelemetry tracing** and enable
-    tracking of Azure SDK calls for observability.
+1. Run the cell to configure **OpenTelemetry tracing** and enable tracking of Azure SDK calls for observability.
 
-> ![](./media/image136.png)
+    ![](./media/usx77.png)
 
-5.  Run the cell to connect to your Microsoft Foundry project and
-    initialize the OpenAI client with tracing enabled.
+1. Run the cell to connect to your Microsoft Foundry project and initialize the OpenAI client with tracing enabled.
 
-> ![](./media/image137.png)
+    ![](./media/usx78.png)
 
-6.  Run the cell under **Create and Trace a Travel Agent** to create a
-    traced agent and enable observability for its operations.
+1. Run the cell under **Create and Trace a Travel Agent** to create a traced agent and enable observability for its operations.
 
-> ![](./media/image138.png)
->
-> ![](./media/image139.png)
->
-> ![](./media/image140.png)
->
-> ![](./media/image141.png)
+    ![](./media/usx79.png)
 
-7.  Run the cell under **Configure Azure Monitor Tracing** to enable
-    Application Insights integration and send traces to Azure Monitor
+    ![](./media/usx80.png)
+
+1. Run the cell under **Run a Traced Travel Query** to check the console output below — OpenTelemetry spans appear for each operation.
+
+   ![](./media/usx81.png)
+
+   ![](./media/usx82.png)
+
+1. Run the cell under **Configure Azure Monitor Tracing** to enable Application Insights integration and send traces to Azure Monitor
     for observability.
 
-![](./media/image142.png)
+    ![](./media/usx83.png)
 
-![](./media/image143.png)
+    ![](./media/usx84.png)
 
-8.  Run the cell under **Run a Traced Travel Query (Azure Monitor)** to
-    execute a query and generate traces that can be viewed in Azure
+1. Run the cell under **Run a Traced Travel Query (Azure Monitor)** to execute a query and generate traces that can be viewed in Azure
     Monitor.
 
-![](./media/image144.png)
+    ![](./media/usx85.png)
 
-![](./media/image145.png)
+    ![](./media/usx86.png) 
 
-9.  Open a browser go to ++++++ and sign in with your cloud slice
-    account below.
+1. Back in the Foundry portal select **Agents**, then click on the **contoso-travel-traced** agent to view its details and traces.
 
-10. Select **Resource groups**
+    ![](./media/usx87.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image146.png)
+1. Click on the **Tracing** tab for your agent. You should see your traces listed with the span names that were defined.
 
-11. Click on your assigned **Resource group**.
+    ![](./media/usx88.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image147.png)
+1. Click on a trace to see the full span tree
 
-12. Click on your **Foundry Project** to open and view its details.
+    ![](./media/usx89.png)
 
-![](./media/image148.png)
+    ![](./media/usx90.png)
 
-13. Click **Go to Foundry portal**.
+    ![](./media/usx91.png)
 
-![](./media/image149.png)
+   > **Note** Traces may take 2-5 minutes to appear in Azure Monitor after execution.
 
-14. On the Microsoft Foundry home page, select **Build**.
+1. Return to your Codespace to continue the lab.
 
-![](./media/image150.png)
+1. Run the cell under **Custom Span Attributes** to add custom metadata to traces for improved filtering and analysis in Azure Monitor.
 
-15. Select **Agents**, then click on the **contoso-travel-traced** agent
-    to view its details and traces.![](./media/image151.png)
+    ![](./media/usx92.png)
 
-16. Click on the **Tracing** tab for your agent. You should see your
-    traces listed with the span names that were defined.
+    ![](./media/usx93.png)
 
-![](./media/image152.png)
+1. Run the final cell to delete the conversation and agent resources.
 
-17. Click on a trace to see the full span tree
-
-![](./media/image153.png)
-
-![](./media/image154.png)
-
-** Note:** Traces may take 2-5 minutes to appear in Azure Monitor after
-execution.
-
-![](./media/image155.png)
-
-18. Return to your Codespace to continue the lab.
-
-19. Run the cell under **Custom Span Attributes** to add custom metadata
-    to traces for improved filtering and analysis in Azure Monitor.
-
-![](./media/image156.png)
-
-![](./media/image157.png)
-
-20. Run the final cell to delete the conversation and agent resources.
-
-![](./media/image158.png)
+    ![](./media/usx94.png)
 
 ### Task 7: Evaluate Your Travel Agent
 
