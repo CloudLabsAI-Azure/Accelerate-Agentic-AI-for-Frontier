@@ -922,73 +922,63 @@ In this task, you will conduct advanced red teaming to test your agent
 against potential threats and adversarial inputs. This helps ensure that
 the agent operates safely and adheres to responsible AI principles.
 
-1.  Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and
-    open the **lab-06-redteam.ipynb** notebook to begin the environment
+1.  Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and open the **lab-06-redteam.ipynb** notebook to begin the environment
     setup lab.
 
-![](./media/image188.png)
+    ![](./media/usx125.png)
 
-2.  Click **Select Kernel**, then choose the **Python 3.12.13**
-    environment to run the Lab 02 notebook.
+1.  Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 02 notebook.
 
-![](./media/image189.png)
+    ![](./media/usx126.png)
 
-3.  Run the cell under **Setup** to connect to Microsoft Foundry and
-    initialize the red teaming environment.
+1.  Run the cell under **Setup** to connect to Microsoft Foundry and initialize the red teaming environment.
 
-![](./media/image190.png)
+    ![](./media/usx127.png)
 
-4.  Run the cell under **Create the Travel Agent and Red Team** to
-    create a versioned agent and set up a red team evaluation for safety
+1.  Run the cell under **Create the Travel Agent and Red Team** to create a versioned agent and set up a red team evaluation for safety
     testing.
 
-![](./media/image191.png)
+    ![](./media/usx128.png)
 
-![](./media/image192.png)
+    ![](./media/usx129.png)
 
-5.  Run the cell under **Create an Evaluation Taxonomy** to define the
-    agent target and generate a taxonomy for prohibited actions used in
+1.  Run the cell under **Create an Evaluation Taxonomy** to define the agent target and generate a taxonomy for prohibited actions used in
     red teaming.
 
-![](./media/image193.png)
+    ![](./media/usx130.png)
 
-![](./media/image194.png)
+    ![](./media/usx131.png)
 
-6.  Run the cell under **Create a Red Team Run** to initiate a red
-    teaming evaluation with defined attack strategies and multi-turn
+1.  Run the cell under **Create a Red Team Run** to initiate a red teaming evaluation with defined attack strategies and multi-turn
     scenarios.
 
-![](./media/image195.png)
+    ![](./media/usx132.png)
 
-7.  Run the cell to **monitor the red team run status**, polling until
-    the evaluation is completed.
+1.  Run the cell to **monitor the red team run status**, polling until  the evaluation is completed.
 
-![](./media/image196.png)
+    ![](./media/usx133.png)
 
-![](./media/image197.png)
+    ![](./media/usx134.png)
 
-![](./media/image198.png)
+    ![](./media/usx135.png)
 
-20. Go to the +++https://ai.azure.com/+++
+1. Back in the Foundry portal, navigate to the **contoso-travel-redteam** agent
 
-21. Open your project
+    ![](./media/usx136.png)
 
-![](./media/image199.png)
+1. Navigate to **Evaluations** → select the red team evaluation
 
-22. Navigate to **Evaluations** → select the red team evaluation
+    ![](./media/usx137.png)
 
-![](./media/image200.png)
+    ![](./media/usx138.png)
 
-![](./media/image201.png)
+1. Review individual attack attempts, agent responses, and evaluator  scores
 
-23. Review individual attack attempts, agent responses, and evaluator
-    scores
+    ![](./media/usx139.png)
 
-![](./media/image202.png)
+1. Run the final cell to delete the conversation and agent resources.
 
-23. Run the final cell to delete the conversation and agent resources.
-
-![](./media/image203.png)
+    ![](./media/usx140.png)
 
 ### Task 9: Delete the Resources
 
@@ -996,31 +986,22 @@ In the final task, you will clean up all resources created during the
 lab. This ensures that no unnecessary costs are incurred and that your
 environment is reset for future use.
 
-1.  To delete Resource group , type **Resource groups** in the Azure
-    portal search bar, navigate and click on **Resource
+1.  To delete Resource group , type **Resource groups** in the Azure portal search bar, navigate and click on **Resource
     groups** under **Services**.
 
-> ![A screenshot of a computer Description automatically
-> generated](./media/image204.png)
+    ![](./media/usx141.png)
 
-2.  In the Resource groups page, select your resource group.
+1.  In the Resource groups page, select your **AgenticAI** resource group.
 
-3.  In the **Resource group** home page, select all resources and click
-    on **Delete**
+1.  In the **Resource group** home page, select all resources and click on **Delete**
 
-> ![](./media/image205.png)
+    ![](./media/usx142.png)
 
-4.  In the **Delete Resources** pane that appears on the right side,
-    navigate to **Enter “delete” to confirm deletion** field, then click
+1.  In the **Delete Resources** pane that appears on the right side, navigate to **Enter “delete” to confirm deletion** field, then click
     on the **Delete** button
 
-> ![](./media/image206.png)
+1.  On **Delete confirmation** dialog box, click on **Delete** button.
 
-5.  On **Delete confirmation** dialog box, click on **Delete** button.
-
-> ![A screenshot of a computer error AI-generated content may be
-> incorrect.](./media/image207.png)
->
 > **Summary**
 >
 > This scenario demonstrates how to design, deploy, and manage AI agents
