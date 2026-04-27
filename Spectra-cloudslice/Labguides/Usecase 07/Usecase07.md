@@ -174,11 +174,11 @@ while adhering to its intended role
 
 4.  Enter the below in the chat panel and select **Send**
    
-   ```
+    ```
     Hi. I'm thinking about planning a trip to Paris. What should I know? 
-   ```
+    ```
  
-   ![](./media/us23.1.png)
+    ![](./media/us23.1.png)
 
 5.  Observe the response.
 
@@ -191,7 +191,7 @@ while adhering to its intended role
 7.  Customize the list to reflect evaluation criteria you want to use and try a new request.
 
      ```
-        Hi. I'm thinking about planning a trip to Paris. What should I know? 
+     Hi. I'm thinking about planning a trip to Paris. What should I know? 
      ```    
 
      ![](./media/us26.1.png)
@@ -208,28 +208,28 @@ while adhering to its intended role
 
 11. Enter the details
 
-- **Display name (1)**: Contoso Travel Assistant
-- **Description (2)**
+    - **Display name (1)**: Contoso Travel Assistant
+    - **Description (2)**
 
-   ```
-        Welcome to Contoso Travel. We can help you plan your next itinerary
-        with flight bookings, car rentals and hotel reservations. Just tell us
+       ```
+       Welcome to Contoso Travel. We can help you plan your next itinerary
+       with flight bookings, car rentals and hotel reservations. Just tell us
        your destination and the number of travellers in your group - and we'll
        do the rest. 
-     ```  
+       ```  
 -**Starter prompts (3)**
 
-     ```
-        I want to plan a multi-day travel itinerary 
-     ```  
+    ```
+    I want to plan a multi-day travel itinerary 
+    ```  
      
-     ```
-       I want to rent a car at my travel destination
-     ```  
+    ```
+    I want to rent a car at my travel destination
+    ```  
      
-     ```
-       I want to book a flight and hotel for my travels
-     ``` 
+    ```
+    I want to book a flight and hotel for my travels
+    ``` 
 
 - Click on **Reset (4)**
 
@@ -238,7 +238,7 @@ while adhering to its intended role
 12. In the Test pane, enter the below and click **Send.**
 
      ```
-        I want to plan a multi-day travel itinerary 
+     I want to plan a multi-day travel itinerary 
      ```  
 
      ![](./media/us30.png)
@@ -253,7 +253,6 @@ while adhering to its intended role
        Hi! I'm thinking about planning a trip to Paris from Jul 1–4 with my
        family (3 people total). We are vegetarian. We love sports, historic
        homes, art and food tours
-
       ```
 
        ![](./media/us32.png)
@@ -268,16 +267,15 @@ while adhering to its intended role
 
 17. Want to understand what the Trace ID is showing - try **Ask AI** and enter the below prompt and click on **Send**
 
-   ```
-     Explain what the trace ID is showing
-           
-   ```
+    ```
+    Explain what the trace ID is showing     
+    ```
  
-   ![](./media/us35.png)
+     ![](./media/us35.png)
 
-   ![](./media/us36.png)
+     ![](./media/us36.png)
 
-   ![](./media/us37.png)
+     ![](./media/us37.png)
 
 18. Click on the Trace ID - you should see something like this:
 
@@ -293,16 +291,15 @@ while adhering to its intended role
 
 20. Enter the following text and click on the **Submit icon** as shown in the below image.
 
-   ```
-   I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for
-   Paris and returning Jul 5. I am traveling with my family (3 people
-   total). We are vegetarians. We love sports, historic homes and art and
-   food tours. Plan my itinerary and show me hotels and flights for my
-   stay
-           
-   ```
+    ```
+    I want to plan a multi-day travel itinerary leaving JFK on Jul 1 for
+    Paris and returning Jul 5. I am traveling with my family (3 people
+    total). We are vegetarians. We love sports, historic homes and art and
+    food tours. Plan my itinerary and show me hotels and flights for my
+    stay           
+    ```
 
-   ![](./media/us42.png)
+     ![](./media/us42.png)
 
 21. You can review the agent response in the preview tab itself
 
@@ -342,10 +339,9 @@ also invoke *code-first*.
 4.  Use "Ask AI" to get explanations for any of them - e.g., ask:
 
     ```
-    Tell me more about the Protected-Material evaluator
-               
+    Tell me more about the Protected-Material evaluator        
     ```
-   ![](./media/us49.png)
+    ![](./media/us49.png)
 
 5.  Click the **Create** button.
 
@@ -408,9 +404,8 @@ Codespace, and prepare your workspace for development.
 
 1.  Open your browser, navigate to the address bar, type or paste the following URL:
 
-     ```
-    https://github.com/technofocus-pte/Foundry-Control-Plane-agent-observability
-               
+    ```
+    https://github.com/technofocus-pte/Foundry-Control-Plane-agent-observability          
     ```
 
      ![](./media/usx1.png)
@@ -434,8 +429,7 @@ Codespace, and prepare your workspace for development.
 1.  Run the below command to run the script to set up the required  environment for the lab.
 
     ```
-    ./labs/notebooks/setup-env.sh
-               
+    ./labs/notebooks/setup-env.sh         
     ```
      ![](./media/usx6.png)
 
@@ -499,21 +493,21 @@ and the Foundry project.
 
 1.  Load and validate the environment variables from the shared .env  file by running the second cell in the notebook.
 
-   ![](./media/usx19.png)
+    ![](./media/usx19.png)
 
-   ![](./media/usx20.png)
+    ![](./media/usx20.png)
 
 1.  Verify that you can connect to your Microsoft Foundry project using the SDK by running the 3^(rd) cell in the notebook.
 
-   ![](./media/usx22.png)
+    ![](./media/usx22.png)
 
-   ![](./media/usx23.png)
+    ![](./media/usx23.png)
 
 1.  Run the cell under **Validate OpenAI Client** to verify that your OpenAI client is correctly configured and responding.
 
-   ![](./media/usx24.png)
+    ![](./media/usx24.png)
 
-   ![](./media/usx25.png)
+    ![](./media/usx25.png)
 
 1.  Explore the Contoso Travel sample data by running the 5^(th), 6^(th), 7^(th) and 8^(th) cells in the notebook.
 
@@ -892,73 +886,63 @@ In this task, you will conduct advanced red teaming to test your agent
 against potential threats and adversarial inputs. This helps ensure that
 the agent operates safely and adheres to responsible AI principles.
 
-1.  Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and
-    open the **lab-06-redteam.ipynb** notebook to begin the environment
+1.  Navigate to the **labs/notebooks/1-prompt-agents/lab** folder and open the **lab-06-redteam.ipynb** notebook to begin the environment
     setup lab.
 
-![](./media/image188.png)
+    ![](./media/usx125.png)
 
-2.  Click **Select Kernel**, then choose the **Python 3.12.13**
-    environment to run the Lab 02 notebook.
+1.  Click **Select Kernel**, then choose the **Python 3.12.13** environment to run the Lab 02 notebook.
 
-![](./media/image189.png)
+    ![](./media/usx126.png)
 
-3.  Run the cell under **Setup** to connect to Microsoft Foundry and
-    initialize the red teaming environment.
+1.  Run the cell under **Setup** to connect to Microsoft Foundry and initialize the red teaming environment.
 
-![](./media/image190.png)
+    ![](./media/usx127.png)
 
-4.  Run the cell under **Create the Travel Agent and Red Team** to
-    create a versioned agent and set up a red team evaluation for safety
+1.  Run the cell under **Create the Travel Agent and Red Team** to create a versioned agent and set up a red team evaluation for safety
     testing.
 
-![](./media/image191.png)
+    ![](./media/usx128.png)
 
-![](./media/image192.png)
+    ![](./media/usx129.png)
 
-5.  Run the cell under **Create an Evaluation Taxonomy** to define the
-    agent target and generate a taxonomy for prohibited actions used in
+1.  Run the cell under **Create an Evaluation Taxonomy** to define the agent target and generate a taxonomy for prohibited actions used in
     red teaming.
 
-![](./media/image193.png)
+    ![](./media/usx130.png)
 
-![](./media/image194.png)
+    ![](./media/usx131.png)
 
-6.  Run the cell under **Create a Red Team Run** to initiate a red
-    teaming evaluation with defined attack strategies and multi-turn
+1.  Run the cell under **Create a Red Team Run** to initiate a red teaming evaluation with defined attack strategies and multi-turn
     scenarios.
 
-![](./media/image195.png)
+    ![](./media/usx132.png)
 
-7.  Run the cell to **monitor the red team run status**, polling until
-    the evaluation is completed.
+1.  Run the cell to **monitor the red team run status**, polling until  the evaluation is completed.
 
-![](./media/image196.png)
+    ![](./media/usx133.png)
 
-![](./media/image197.png)
+    ![](./media/usx134.png)
 
-![](./media/image198.png)
+    ![](./media/usx135.png)
 
-20. Go to the +++https://ai.azure.com/+++
+1. Back in the Foundry portal, navigate to the **contoso-travel-redteam** agent
 
-21. Open your project
+    ![](./media/usx136.png)
 
-![](./media/image199.png)
+1. Navigate to **Evaluations** → select the red team evaluation
 
-22. Navigate to **Evaluations** → select the red team evaluation
+    ![](./media/usx137.png)
 
-![](./media/image200.png)
+    ![](./media/usx138.png)
 
-![](./media/image201.png)
+1. Review individual attack attempts, agent responses, and evaluator  scores
 
-23. Review individual attack attempts, agent responses, and evaluator
-    scores
+    ![](./media/usx139.png)
 
-![](./media/image202.png)
+1. Run the final cell to delete the conversation and agent resources.
 
-23. Run the final cell to delete the conversation and agent resources.
-
-![](./media/image203.png)
+    ![](./media/usx140.png)
 
 ### Task 9: Delete the Resources
 
@@ -966,31 +950,22 @@ In the final task, you will clean up all resources created during the
 lab. This ensures that no unnecessary costs are incurred and that your
 environment is reset for future use.
 
-1.  To delete Resource group , type **Resource groups** in the Azure
-    portal search bar, navigate and click on **Resource
+1.  To delete Resource group , type **Resource groups** in the Azure portal search bar, navigate and click on **Resource
     groups** under **Services**.
 
-> ![A screenshot of a computer Description automatically
-> generated](./media/image204.png)
+    ![](./media/usx141.png)
 
-2.  In the Resource groups page, select your resource group.
+1.  In the Resource groups page, select your **AgenticAI** resource group.
 
-3.  In the **Resource group** home page, select all resources and click
-    on **Delete**
+1.  In the **Resource group** home page, select all resources and click on **Delete**
 
-> ![](./media/image205.png)
+    ![](./media/usx142.png)
 
-4.  In the **Delete Resources** pane that appears on the right side,
-    navigate to **Enter “delete” to confirm deletion** field, then click
+1.  In the **Delete Resources** pane that appears on the right side, navigate to **Enter “delete” to confirm deletion** field, then click
     on the **Delete** button
 
-> ![](./media/image206.png)
+1.  On **Delete confirmation** dialog box, click on **Delete** button.
 
-5.  On **Delete confirmation** dialog box, click on **Delete** button.
-
-> ![A screenshot of a computer error AI-generated content may be
-> incorrect.](./media/image207.png)
->
 > **Summary**
 >
 > This scenario demonstrates how to design, deploy, and manage AI agents
