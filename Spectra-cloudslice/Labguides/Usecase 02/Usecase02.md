@@ -1,6 +1,6 @@
-## Usecase 2- Building multi agent AI solution for streamlining Healthcare prior authorization workflows 
+# Usecase 2- Building multi agent AI solution for streamlining Healthcare prior authorization workflows 
 
-**Introduction**
+## Overview
 
 In today’s rapidly evolving digital landscape, enterprises like
 **Contoso Ltd.** face increasing pressure to streamline operations,
@@ -69,6 +69,15 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 - **GitHub Account**: You are expected to have your own GitHub login credentials. If you do not have an account, please create one by visiting: <https://github.com/signup
 
+## Lab Objective
+
+- Task 1: Register Service provider
+- Task 2: Retrieve resource group name and location
+- Task 3: Open Github Codespaces environment
+- Task 4: Provision Services and deploy application to Azure
+- Task 5: Verify deployed resources in the Azure portal
+- Task 6: Test the Application
+
 ## Task 1: Register Service provider
 
 1. In the Azure portal search bar, type **Subscriptions** (1), then select **Subscriptions** from the **Services** list (2) to open it.
@@ -93,81 +102,71 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 1. In the Azure portal search bar, type **Resource groups** (1), then select **Resource groups** from the **Services** list (2) to open it.
 
-2. Click on your assigned **Resource group**.
+1. Click on your assigned **Resource group**.
 
     ![](./media/image18.png)
 
-3. In **Resource group** page, copy **resource group name and
-    location** and paste them in a notepad, then **Save** the notepad to
-    use the information in the upcoming tasks.
+1. In **Resource group** page, copy **resource group name and location** and paste them in a notepad, then **Save** the notepad to use the information in the upcoming tasks.
 
 ## Task 3: Open Github Codespaces environment
 
-1. Open your browser, navigate to the address bar, type or paste the
-    following URL: 
+1. Open your browser, navigate to the address bar, type or paste the following URL: 
 
     ```
     https://github.com/technofocus-pte/MultiAgent-Solution-Accelerator.git
     ```
 
-    ![](./media/uc2-22.png)
-
 1. Click on **Fork** (top-right corner) to create your own copy of the repository.
 
-    ![](./media/uc2-23.png)
+    ![](./media/uc2-22.png)
 
 1. Click on **fork** to fork the repo. Give unique name to the repo and click on **Create repo** button.
 
-    ![](./media/uc2-25.png) 
+    ![](./media/uc2-23.png) 
 
 1. Click on **Code**, switch to the **Codespaces** tab, and select **Create codespace on main** to launch the development environment.
 
     ![](./media/uc2-26.png) 
 
-1. Wait for the Codespaces environment to setup. It takes few minutes
-    to setup completely
+1. Wait for the Codespaces environment to setup. It takes few minutes to setup completely.
 
-     ![](./media/image24.png)
+    ![](./media/image24.png)
 
-     ![](./media/image25.png)
+    ![](./media/image25.png)
 
 1. The environment is now ready for resource deployment.
 
-     ![](./media/image26.png)
+    ![](./media/image26.png)
 
 ## Task 4: Provision Services and deploy application to Azure
 
-1. Run the following command on the Terminal. It generates the code to
-    copy. Copy the code and press Enter.
+1. Run the following command on the Terminal. It generates the code to copy. Copy the code and press Enter.
 
- **azd auth login**
+    ```
+    azd auth login
+    ```
 
-     ![](./media/image27.png)
+    ![](./media/image27.png)
 
-2. Run the azd auth login command, copy the displayed authentication
-    code, and complete the sign-in process in your browser to
-    authenticate your environment.
+1. Run the azd auth login command, copy the displayed authentication code, and complete the sign-in process in your browser to authenticate your environment.
 
-     ![](./media/image28.png)
+    ![](./media/image28.png)
 
-3. Default browser opens to enter the generated code to verify. Enter
-    the code and click **Next**.
+1. Default browser opens to enter the generated code to verify. Enter the code and click **Next**.
 
      ![](./media/image29.png)
 
-4. Sign in with your Azure credentials.
+1. Sign in with your Azure credentials.
 
     ![](./media/image30.png)
 
-     ![](./media/image31.png)
+    ![](./media/image31.png)
 
-     ![](./media/image32.png)
+    ![](./media/image32.png)
 
-9. Run the az login command, copy the displayed authentication code,
-    and complete the sign-in process in your browser to authenticate
-    your environment.
+1. Run the az login command, copy the displayed authentication code, and complete the sign-in process in your browser to authenticate your environment.
 
-     ![](./media/image33.png)
+    ![](./media/image33.png)
 
     ![](./media/image34.png)
 
@@ -175,33 +174,31 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image35.png)
 
-10. Run azd up - This will provision Azure resources
+1. Run azd up - This will provision Azure resources
 
     ![](./media/image36.png)
 
-11. Enter any name of your choice and press enter (eg
-    :**prior-auth-devXXXX**)
+1. Enter any name of your choice and press enter (eg:**prior-auth-devXXXX**)
 
     ![](./media/image37.png)
 
     ![](./media/image38.png)
 
-12. Select below values.
+1. Select below values.
 
-- **Select an Azure Subscription to use** : Select your subscription
+    - **Select an Azure Subscription to use** : Select your subscription
 
-- **Enter a value for existingResourceGroup Name:** existing resource
-  group
+    - **Enter a value for existingResourceGroup Name:** existing resource group
 
-- **Enter location**: Sweden Central
+    - **Enter location**: Sweden Central
 
-    ![](./media/image39.png)
+      ![](./media/image39.png)
 
-    ![](./media/image40.png)
+      ![](./media/image40.png)
 
-    ![](./media/image41.png)
+      ![](./media/image41.png)
 
-13. Enter **Y** to proceed with the deployment.
+1. Enter **Y** to proceed with the deployment.
 
     ![](./media/image42.png)
 
@@ -211,54 +208,41 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image45.png)
 
-14. The deployment process is currently building container images using
-    a remote Azure Container Registry (ACR) build.
+1. The deployment process is currently building container images using a remote Azure Container Registry (ACR) build.
 
     ![](./media/image46.png)
 
     ![](./media/image47.png)
 
-15. The frontend container image has been built successfully, and the
-    agent-clinical image build process has started in Azure Container
-    Registry (ACR).
+1. The frontend container image has been built successfully, and the agent-clinical image build process has started in Azure Container Registry (ACR).
 
     ![](./media/image48.png)
 
-16. Agent-clinical image build process completed and building
-    agent-coverage build process has started in Azure Container Registry
-    (ACR).
+1. Agent-clinical image build process completed and building agent-coverage build process has started in Azure Container Registry (ACR).
 
     ![](./media/image49.png)
 
-17. Agent-coverage image build process completed and building
-    agent-compliance build process has started in Azure Container
-    Registry (ACR).
+1. Agent-coverage image build process completed and building agent-compliance build process has started in Azure Container Registry (ACR).
 
      ![](./media/image50.png)
 
-18. Agent-compliance image build process completed and building
-    agent-synthesis build process has started in Azure Container
-    Registry (ACR).
+1. Agent-compliance image build process completed and building agent-synthesis build process has started in Azure Container Registry (ACR).
 
     ![](./media/image51.png)
 
-19. Agent-synthesis image build process completed
+1. Agent-synthesis image build process completed
 
     ![](./media/image52.png)
 
-20. Backend and frontend container app updated sucessfully
+1. Backend and frontend container app updated sucessfully
 
      ![](./media/image53.png)
 
-21. The agent-synthesis image has been built successfully, container
-    apps have been updated, required roles have been ensured, and
-    Foundry MCP tool connections have been created successfully.
+1. The agent-synthesis image has been built successfully, container apps have been updated, required roles have been ensured, and Foundry MCP tool connections have been created successfully.
 
      ![](./media/image54.png)
 
-22. The deployment has completed successfully, and the frontend and
-    backend application URLs, along with the backend health check
-    endpoint, are now available for access.
+1. The deployment has completed successfully, and the frontend and backend application URLs, along with the backend health check endpoint, are now available for access.
 
      ![](./media/image55.png)
 
@@ -266,67 +250,65 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 1. Select **Resource groups**
 
-     ![](./media/image56.png)
+    ![](./media/image56.png)
 
-2. Click on your assigned **Resource group**.
+1. Click on your assigned **Resource group**.
 
     ![](./media/image57.png)
 
-3. Make sure the below resource got deployed successfully
+1. Make sure the below resource got deployed successfully
 
-- Foundry
+    - Foundry
 
-- Foundry project
+    - Foundry project
 
-- Container App
+    - Container App
 
-- Container registry
+    - Container registry
 
-- Container App Environment
-
-    ![](./media/image58.png)
-
-4. Click on **Foundry Project.**
+    - Container App Environment
 
     ![](./media/image58.png)
 
-5. Click **Go to Foundry portal** to verify that the agents has been
+1. Click on **Foundry Project.**
+
+    ![](./media/image58.png)
+
+1. Click **Go to Foundry portal** to verify that the agents has been
     successfully deployed.
 
     ![](./media/image59.png)
 
-6. In Microsoft Foundry, navigate to the **Build** section from the top
+1. In Microsoft Foundry, navigate to the **Build** section from the top
     menu to start creating and managing your AI solutions.
 
     ![](./media/image60.png)
 
-7. Agents has been successfully deployed
+1. Agents has been successfully deployed
 
     ![](./media/image61.png)
 
-8. Select the **synthesis-agent**.
+1. Select the **synthesis-agent**.
 
     ![](./media/image61.png)
 
-9. Click on **Start agent deployment** to deploy the synthesis-agent.
+1. Click on **Start agent deployment** to deploy the synthesis-agent.
 
     ![](./media/image62.png)
 
     ![](./media/image63.png)
 
-10. Select the **compliance-agent**.
+1. Select the **compliance-agent**.
 
     ![](./media/image64.png)
 
-11. Click on **Start agent deployment** to deploy the
-    **compliance-agent**.
+1. Click on **Start agent deployment** to deploy the **compliance-agent**.
 
     ![](./media/image65.png)
 
     ![](./media/image66.png)
 
-12. Repeat steps 10 and 11 to run the **coverage-assessment-agent** and
-    **clinical-reviewer-agent**.
+1. Repeat steps 10 and 11 to run the **coverage-assessment-agent** and **clinical-reviewer-agent**.
 
     ![](./media/image67.png)
 
@@ -336,66 +318,65 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
 ## Task 6: Test the Application
 
-1. Go back to the codespace and copy the **Frontend URL**; it will be
-    used later to launch the application.
+1. Go back to the codespace and copy the **Frontend URL**; it will be used later to launch the application.
 
     ![](./media/image70.png)
 
-2. Run the command **python scripts/check_agents.py** to verify agent
-    connections and application health status.
+1. Run the following command to verify agent connections and application health status.
+
+    ```
+    python scripts/check_agents.py
+    ```
 
     ![](./media/image71.png)
 
     ![](./media/image72.png)
 
-3. Run the check_agents.py script to verify agent registration, backend
-    health, frontend availability, and tool connections, ensuring all
-    checks pass successfully before proceeding with PA request
-    submission.
+1. Run the check_agents.py script to verify agent registration, backend health, frontend availability, and tool connections, ensuring all checks pass successfully before proceeding with PA request submission.
 
-**python scripts/check_agents.py --version 1**
+    ```
+    python scripts/check_agents.py --version 1
+    ```
 
     ![](./media/image73.png)
 
-13. Run the check_agents.py --poll command to continuously monitor agent
-    status, ensuring all components like registration, tool connections,
-    backend health, and frontend availability remain healthy before
-    submitting PA requests.
+1. Run the check_agents.py --poll command to continuously monitor agent status, ensuring all components like registration, tool connections, backend health, and frontend availability remain healthy before submitting PA requests.
 
-**python scripts/check_agents.py –poll**
-
-    ![](./media/image74.png)
-
-14. Click on **Frontend**
+    ```
+    python scripts/check_agents.py --poll
+    ```
 
     ![](./media/image74.png)
 
-4. Click on **Open** button
+1. Click on **Frontend**
+
+    ![](./media/image74.png)
+
+1. Click on **Open** button
 
     ![](./media/image75.png)
 
     ![](./media/image76.png)
 
-5. Click **"Load Sample Case"** to populate the form with demo data
+1. Click **"Load Sample Case"** to populate the form with demo data
 
     ![](./media/image77.png)
 
-6. Click **"Submit for Review"**
+1. Click **"Submit for Review"**
 
     ![](./media/image78.png)
 
-7. Monitor the progress tracker — you should see all 5 phases complete
+1. Monitor the progress tracker — you should see all 5 phases complete
 
     ![](./media/image79.png)
 
     ![](./media/image80.png)
 
-8. Review the agent results in the dashboard tabs (Compliance,
-    Clinical, Coverage)
+1. Review the agent results in the dashboard tabs (Compliance, Clinical, Coverage)
 
     ![](./media/image81.png)
 
-15. Click **Accept Recommendation**
+1. Click **Accept Recommendation**
 
     ![](./media/image82.png)
 
@@ -405,7 +386,7 @@ To overcome these challenges, Contoso implements a **multi-agent AI system** whe
 
     ![](./media/image85.png)
 
-**Summary**
+## Summary
 
 In this usecase, you successfully built and deployed a **multi-agent
 AI-powered healthcare solution** that automates prior authorization

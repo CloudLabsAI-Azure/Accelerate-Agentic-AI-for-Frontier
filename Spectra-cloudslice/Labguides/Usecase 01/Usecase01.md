@@ -1,6 +1,6 @@
 # Usecase 01 - Create a Knowledge Assistant agent for HR in Copilot Studio  that leverages Azure AI Search
 
-## Objective:
+## Overview
 
 A large enterprise wants to reduce the time employees spend searching
 for HR-related information (policies, benefits, leave guidelines, etc.)
@@ -10,6 +10,15 @@ To overcome this issue, in this lab, you will build a **Knowledge
 assistant** **agent** in **Copilot Studio** that uses **Azure AI
 Search**, to index and semantically search across enterprise HR
 documents.
+
+## Lab Objective
+
+- Exercise 1: Create an Azure AI Search resource
+- Exercise 2: Create a Storage account
+- Exercise 3: Create an Azure OpenAI Service and deploy a model
+- Exercise 4: Create a vector index
+- Exercise 5: Create a knowledge assistant agent
+- Exercise 6: Add the Azure AI Search as a knowledge source
 
 ## Exercise 1: Create an Azure AI Search resource
 
@@ -23,38 +32,38 @@ JSON-based indexes to provide fast, relevant search results.
 
 1. In the Azure portal, go to the **top search bar**, enter **Microsoft Foundry (1)**, and from the results, choose **Microsoft Foundry (2)** under the **Services**.
 
-       ![A screenshot of a computer AI-generated content may be
+   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-0.png)
 
 1. In the **Microsoft Foundry** page, expand **Use with Foundry (1)**, select **AI Search (2)**, and then click **+ Create (3)** to begin creating a new AI Search resource.
 
-       ![A screenshot of a computer AI-generated content may be
+   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-1.png)
 
 1. On the **Create a search service** page under the **Basics** tab, provide the following details:
 
      - Select the **Resource group** as **AgenticAI (1)** from the dropdown.
-     - Enter **Service name**  as **searchleaves- (2)**.
+     - Enter **Service name**  as **searchleaves-<inject key="DeploymentID" enableCopy="false"/> (2)**.
      - Choose the appropriate **Location (3)** based on your region or lab requirement.
      - Verify that the **Pricing tier (4)** is set to **Standard** (default selection).
      - Click on **Review + create (5)** to validate the configuration and proceed with deployment.
 
-        ![A screenshot of a computer AI-generated content may be
+       ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-2.png) 
 
 1. On the **Review + create** tab, verify all the configured settings and then click **Create** to deploy the AI Search service.
 
-    ![A screenshot of a computer AI-generated content may be
+   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-3.png) 
 
 1. Once the deployment is complete, click on **Go to resource** to navigate to the newly created AI Search service.
 
-    ![A screenshot of a computer AI-generated content may be
+   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-4.png) 
 
 1. On the AI Search service **Overview** page, locate the **URL** under the **Essentials** section and click the **copy icon** next to it to copy the service endpoint for later use.
 
-    ![A screenshot of a computer AI-generated content may be
+   ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/uc1-5.png) 
 
 1. In the AI Search service, navigate to **Settings**, select **Keys**, and under **Manage admin keys**, click the **copy icon** next to the **Primary admin key** to copy it for later use.
@@ -82,14 +91,14 @@ incorrect.](./media/uc1-5.png)
 1. On the **Create a storage account** page under the **Basics** tab, configure the required settings as follows:
 
     - Select **Resource group**: **AgenticAI**
-    - Enter **Storage account name** (unique)
+    - Enter **Storage account name** as **leavepolicystg<inject key="DeploymentID" enableCopy="false"/>**
     - Choose **Region**
     - Set **Preferred storage type**: **Azure Blob Storage or ADLS Gen2**
     - Keep **Performance**: **Standard**
     - Set **Redundancy**: **LRS**
     - Click **Review + create**
 
-       ![image](./media/uc1-11.png)
+      ![image](./media/uc1-11.png)
 
 1. On the **Review + create** tab, verify all the configured storage account settings and click **Create** to deploy the storage account.
 
@@ -125,7 +134,7 @@ incorrect.](./media/uc1-5.png)
 
    ![image](./media/uc1-19.png)
 
-1. In the **Members** tab, keep **Assign access to** as **User, group, or service principal**, click **Select members**, search and choose the required user, click **Select**, and then proceed by clicking **Next**.
+1. In the **Members** tab, keep **Assign access to** as **User, group, or service principal**, click **Select members**, search and choose the ODL user **<inject key="AzureAdUserEmail"></inject>**, click **Select**, and then proceed by clicking **Next**.
 
    ![image](./media/uc1-20.png)
 
@@ -154,7 +163,7 @@ document and required Role permissions to it.
 
    ![image](./media/uc1-26.png)
 
-1. In the **Create Azure OpenAI** page, select **Resource group** as **AgenticAI** (1), choose the **Region** (2), enter a unique **Name** (3), keep the **Pricing tier** as **Standard S0** (4), and click **Next** (5) to proceed.
+1. In the **Create Azure OpenAI** page, select **Resource group** as **AgenticAI** (1), choose the **Region** (2), enter **Name** as **openaiservice-<inject key="DeploymentID" enableCopy="false"/>** (3), keep the **Pricing tier** as **Standard S0** (4), and click **Next** (5) to proceed.
 
    ![image](./media/uc1-27.png)
 
@@ -174,7 +183,7 @@ document and required Role permissions to it.
 
    ![image](./media/uc1-31.png)
 
-1. In the **Members** tab, keep **Assign access to** as **User, group, or service principal** (1), click **Select members** (2), search and select the required user (3–4), then click **Select** (5) and proceed.
+1. In the **Members** tab, keep **Assign access to** as **User, group, or service principal** (1), click **Select members** (2), search and choose the ODL user **<inject key="AzureAdUserEmail"></inject>**, then click **Select** (5) and proceed.
 
    ![image](./media/uc1-32.png)
 
@@ -208,8 +217,7 @@ document and required Role permissions to it.
 
 ## Exercise 4: Create a vector index
 
-1. Back in the Azure portal, open the **searchleaves** AI Search
-    service resource.
+1. Back in the Azure portal, open the **searchleaves-<inject key="DeploymentID" enableCopy="false"/>** AI Search service resource.
 
 1. On the AI Search service page, click **Import data** to start importing data into the search index.
 
@@ -223,20 +231,20 @@ document and required Role permissions to it.
 
    ![image](./media/uc1-42.png)
 
-1. In the **Configure your Azure Blob Storage** step, select the **Storage account** (1), choose the **Blob container** as **document** (2), and click **Next** (3) to proceed.
+1. In the **Configure your Azure Blob Storage** step, select the **Storage account** **leavepolicystg<inject key="DeploymentID" enableCopy="false"/>** (1), choose the **Blob container** as **document** (2), and click **Next** (3) to proceed.
 
    ![image](./media/uc1-43.png)
 
 1. In the **Vectorize your text** step, configure the following:
 
-    * Set **Kind** to **Azure OpenAI** (1)
-    * Select your **Subscription** (2)
-    * Choose the **Azure OpenAI service** (3)
-    * Set **Model deployment** to **text-embedding-3-large** (4)
-    * Select **System assigned identity** for authentication (5)
-    * Click **Next** (6) to proceed
+    - Set **Kind** to **Azure OpenAI** (1)
+    - Select your **Subscription** (2)
+    - Choose the **Azure OpenAI service** **openaiservice-<inject key="DeploymentID" enableCopy="false"/>** (3)
+    - Set **Model deployment** to **text-embedding-3-large** (4)
+    - Select **System assigned identity** for authentication (5)
+    - Click **Next** (6) to proceed
 
-       ![image](./media/uc1-44.png)
+      ![image](./media/uc1-44.png)
 
 1. In the **Vectorize and enrich your images** step, leave the default options unchanged (no selection) and click **Next** to proceed.
 
@@ -256,280 +264,82 @@ document and required Role permissions to it.
 
 ## Exercise 5: Create a knowledge assistant agent
 
-1. Open a new broser and login to
-    **[https://copilotstudio.microsoft.com**](https://copilotstudio.microsoft.com**/) using your login credentials.
+1. In a new tab, enter the following URL to open **Microsoft Copilot Studio** using your login credentials.
+
+    ```
+    https://copilotstudio.microsoft.com
+    ```
 
 1. Select **Get Started** in the Welcome to Microsoft Copilot Studio.
 
    ![image](./media/image58.png)
 
-   ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image59.png)
+1. Enter the following agent description prompt in the prompt box to define your agent’s purpose and click Send.
 
-1. Select Agents from the left pane. Enter **You are a Knowledge
-    assistant agent for HR who will answer questions related to leaves
-    and leave policies to the employees.** and select **Send**.
+   ```
+   You are a Knowledge assistant agent for HR who will answer questions related to leaves and leave policies to the employees.
+   ```
 
    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image60.png)
+incorrect.](./media/cs2.png)
 
 1. Once the agent is created, in the Test pane, enter **How many days
     of Maternity leaves can I avail?** and click **Send.**
 
-   ![image](./media/image61.png)
+1. Click on **Test** from the top-right corner, then enter following prompt to validate your agent’s response.
 
-1. It gives a generalized reply as in the screenshot below.
+   ```
+   How many days of Maternity leaves can I avail?
+   ```
 
-   ![image](./media/image62.png)
+   ![image](./media/cs4.png)
+
+1. It gives a generalized response as shown in the screenshot below.
+
+   ![image](./media/cs5.png)
 
 ## Exercise 6: Add the Azure AI Search as a knowledge source
 
 1. From the **Overview** page of the agent, select **Add knowledge**.
 
-      ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image63.png)
+   ![A screenshot of a computer AI-generated content may be incorrect.](./media/cs1.png)
 
 1. Select Azure AI Search from the list of knowledge sources available.
 
-   ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image64.png)
+   ![A screenshot of a computer AI-generated content may be incorrect.](./media/image64.png)
 
-1. Click on the **drop down** next to **Not connected** in the next
-    screen and select **Create new connection**.
+1. Click on the **drop down** next to **Not connected** in the next screen and select **Create new connection**.
 
-   ![A screenshot of a search engine AI-generated content may be
-incorrect.](./media/image65.png)
+   ![A screenshot of a search engine AI-generated content may be incorrect.](./media/image65.png)
 
-1. Enter the **Endpoint url** and the **Admin key** values which we
-    saved to a notepad in a previous exercise and then click
-    on **Create** to create the connection.
+1. Enter the **Endpoint url** and the **Admin key** values which we saved to a notepad in a previous exercise and then click on **Create** to create the connection.
 
-   ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image66.png)
+   ![A screenshot of a computer AI-generated content may be incorrect.](./media/image66.png)
 
-1. Once the connection is established, the available index is listed
-    and already selected. Click on **Add to agent**.
+1. Once the connection is established, the available index is listed and already selected. Click on **Add to agent**.
 
    ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image67.png)
 
-1. The AI Search service is added as a knowledge source to the agent
-    and is in **Ready** state now. Ensure that the **Web search** option
-    is **disabled** in the Knowledge section.
+1. The AI Search service is added as a knowledge source to the agent and is in **Ready** state now. Ensure that the **Web search** option is **disabled** in the Knowledge section.
 
-   ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image68.png)
+   ![A screenshot of a computer AI-generated content may be incorrect.](./media/cs3.png)
 
 1. Now, let us test the agent with the same question we tried before.
 
-1. In the Test pane, enter **How many days of Maternity leaves can I
-    avail?** and click **Send.**
+1. Click **New test session**, enter your query, and review the generated response to verify the agent’s accuracy.
 
-   ![image](./media/image69.png)
+   ```
+   How many days of Maternity leaves can I avail?
+   ```
 
-1. You can see that the response from the agent now is from the
-    document uploaded in the AI Search service.
+1. You can see that the response from the agent now is from the document uploaded in the AI Search service.
 
    ![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image70.png)
+incorrect.](./media/uc1-51.png)
 
-**Summary:**
+## Summary
 
 In this lab, we have learnt to connect the agent to a Azure AI Search
 service as a knowledge source and test the agent based on the source.
 
-12. Wait for a **success** message on the role additions before
-    proceeding with the next tasks.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image42.png)
-
-13. From the **Overview** page of the Azure OpenAI Service resource,
-    select **Go to Azure AI Foundry portal** to open the Azure OpenAI
-    Service there and deploy a model.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image43.png)
-
-14. Select **Deployments** from the left pane.
-
-![A screenshot of a chat AI-generated content may be
-incorrect.](./media/image44.png)
-
-15. Select **+ Deploy model** -\> **Deploy base model**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image45.png)
-
-16. Select **Embeddings** under **Inference tasks**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image46.png)
-
-17. Search for ****text-embedding****,
-    select **text-embedding-3-large** and then select **Confirm**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image47.png)
-
-18. Select **Deployment type** as **Standard** and then
-    select **Deploy** in the **Deploy text-embedding-3-large** screen..
-
-![image](./media/image48.png)
-
-19. The model gets deployed and the screen is loaded with the deployment
-    details.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image49.png)
-
-**Exercise 4: Create a vector index**
-
-1. Back in the Azure portal, open the **searchleaves** AI Search
-    service resource.
-
-2. Select **Import and vectorize data**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image50.png)
-
-3. Select the **Azure Blob Storage** option.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image51.png)
-
-4. Select the **RAG** option in the **What scenarios are you
-    targeting?** screen.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image52.png)
-
-5. Enter the below details, accept the other values as default and
-    click **Next**.
-
-    - Subscription - Select your **assigned subscription**
-
-    - Storage account-
-      Select [**leavepolicystg@lab.LabInstance.Id**](mailto:leavepolicystg@lab.LabInstance.Id)
-
-    - Blob-container - Select **document**
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image53.png)
-
-6. In the Vectorize your text screen, the subscription is
-    pre-populated. Enter the below details and click **Next**.
-
-    - Azure OpenAI Service -
-      Select [**openaiservice@lab.LabInstance.Id**](mailto:openaiservice@lab.LabInstance.Id)
-
-    - Model deployment - Select **text-embedding-3-large**
-
-    - Authentication type - Select **System assigned identity**
-
-    - Select the checkbox to acknowledge the cost alert of Azure OpenAI.
-
-7. Select Next in the **Vectorize and enrich your images** screen since
-    we are not dealing with images here and select **Next** in
-    the **Advanced settings** screen as well.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image54.png)
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image55.png)
-
-8. Select **Create** in the **Review + create** screen.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image56.png)
-
-9. Click on **Close** in the success dialog box.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image57.png)
-
-**Exercise 5: Create a knowledge assistant agent**
-
-1. Open a new broser and login to
-    **[https://copilotstudio.microsoft.com**](https://copilotstudio.microsoft.com**/) using
-    your login credentials.
-
-2. Select **Get Started** in the Welcome to Microsoft Copilot Studio.
-
-![image](./media/image58.png)
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image59.png)
-
-3. Select Agents from the left pane. Enter **You are a Knowledge
-    assistant agent for HR who will answer questions related to leaves
-    and leave policies to the employees.** and select **Send**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image60.png)
-
-4. Once the agent is created, in the Test pane, enter **How many days
-    of Maternity leaves can I avail?** and click **Send.**
-
-![image](./media/image61.png)
-
-5. It gives a generalized reply as in the screenshot below.
-
-![image](./media/image62.png)
-
-**Exercise 6: Add the Azure AI Search as a knowledge source**
-
-1. From the **Overview** page of the agent, select **Add knowledge**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image63.png)
-
-2. Select Azure AI Search from the list of knowledge sources available.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image64.png)
-
-3. Click on the **drop down** next to **Not connected** in the next
-    screen and select **Create new connection**.
-
-![A screenshot of a search engine AI-generated content may be
-incorrect.](./media/image65.png)
-
-4. Enter the **Endpoint url** and the **Admin key** values which we
-    saved to a notepad in a previous exercise and then click
-    on **Create** to create the connection.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image66.png)
-
-5. Once the connection is established, the available index is listed
-    and already selected. Click on **Add to agent**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image67.png)
-
-6. The AI Search service is added as a knowledge source to the agent
-    and is in **Ready** state now. Ensure that the **Web search** option
-    is **disabled** in the Knowledge section.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image68.png)
-
-7. Now, let us test the agent with the same question we tried before.
-
-8. In the Test pane, enter **How many days of Maternity leaves can I
-    avail?** and click **Send.**
-
-![image](./media/image69.png)
-
-9. You can see that the response from the agent now is from the
-    document uploaded in the AI Search service.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image70.png)
-
-**Summary:**
-
-In this lab, we have learnt to connect the agent to a Azure AI Search
-service as a knowledge source and test the agent based on the source.
