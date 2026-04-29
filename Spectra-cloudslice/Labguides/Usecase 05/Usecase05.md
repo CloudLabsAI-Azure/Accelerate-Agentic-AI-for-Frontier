@@ -131,27 +131,7 @@ incorrect.](./media/135.png)
 
     - **Microsoft.AlertsManagement**
 
-## Task 2: Retrieve resource group name and location
-
-1.  Type in **Resource group** in the search bar and
-    select **Resource groups**.
-
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image10.png)
-
-2.  Click on your assigned **Resource group**.
-
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image11.png)
-
-3.  In **Resource group** page, copy **resource group name and
-    location** and paste them in a notepad, then **Save** the notepad to
-    use the information in the upcoming tasks.
-
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image12.png)
-
-## Task 3: Open Github Codespaces environment
+## Task 2: Open Github Codespaces environment
 
 1.  Open your browser, navigate to the address bar, type or paste the
     following URL: 
@@ -160,6 +140,8 @@ incorrect.](./media/135.png)
 
 2.  Click on **fork** to fork the repo. Give unique name to the repo and
     click on **Create repo** button.
+
+    > **Note:** For this task, you are required to use your personal GitHub account.
 
      ![](./media/image13.png)
 
@@ -185,7 +167,7 @@ incorrect.](./media/135.png)
 
     ![](./media/image17.png)
 
-## Task 4: Provision Services and deploy application to Azure
+## Task 3: Provision Services and deploy application to Azure
 
 1.  Run the following command on the Terminal. It generates the code to
     copy. Copy the code and press Enter.
@@ -357,7 +339,7 @@ lowercase letters.
 
     ![](./media/image49.png)
 
-## Task 5: Verify deployed resources in the Azure portal
+## Task 4: Verify deployed resources in the Azure portal
 
 1.  Select **Resource groups**
 
@@ -400,7 +382,7 @@ incorrect.](./media/139.png)
 
      ![](./media/image55.png)
 
-## Task 6: Test the Application – Housing Affordability & Report Analysis
+## Task 5: Test the Application – Housing Affordability & Report Analysis
 
 1.  Return to the application to continue testing the Housing
     Affordability and Report Analysis features.
@@ -438,7 +420,7 @@ incorrect.](./media/139.png)
 
      ![](./media/image64.png)
 
-## Task 7: Housing Report Search & Comparison
+## Task 6: Housing Report Search & Comparison
 
 1.  Search for: **"Housing Report"** to filter the document list
 
@@ -471,8 +453,7 @@ incorrect.](./media/139.png)
 
      ![](./media/image71.png)
 
-5.  Enter +++ **Can you summarize and compare the tables on page 10 and
-    11?**+++ and select **Send**.
+5.  Enter  **Can you summarize and compare the tables on page 10 and 11?** and select **Send**.
 
      ![](./media/image72.png)
 
@@ -481,7 +462,7 @@ incorrect.](./media/139.png)
      ![](./media/image73.png).
 6.  Close the pop-up viewer
 
-## Task 8: Contracts Search & Analysis
+## Task 7: Contracts Search & Analysis
 
 1.  Search for: **"Contracts"** to filter the document list.
 
@@ -519,7 +500,7 @@ incorrect.](./media/139.png)
 
      ![](./media/image81.png)
 
-## Task 9: Delete the resources
+## Task 8: Delete the resources
 
 1.  From the Azure portal home page, select the assigned Resource group.
     Select all the resources under the Resource group and select Delete.
