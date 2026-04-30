@@ -70,318 +70,290 @@ will be using throughout the lab.
 
     - **Resource Group** – The **Resource group** assigned to you.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image1.png)
+      ![](./media/image1.png)
 
 3.  **Help** tab holds the Support information. The **ID** value here is
     the **Lab instance ID** which will be used during the lab execution.
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image2.png)
+     ![](./media/image2.png)
 
 \[!Alert\] **Important:** Make sure you create all your resources under
 this Resource group
 
 ## Task 1: Register Service provider
 
-1.  Open a browser go to +++https://portal.azure.com+++ and sign in with
-    your cloud slice account below.
+1.  Open a browser and login to Azure portal at <https://portal.azure.com/> with your credentials.
 
-Username: <+++@lab.CloudPortalCredential>(User1).Username+++
+    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-Password: <+++@lab.CloudPortalCredential>(User1). *TAP*+++
+      ![Enter Your Username](./media/gs1.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image3.png)
+    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-![A login box with a red box and blue box with text AI-generated content
-may be incorrect.](./media/image4.png)
+      ![Enter Your Password](./media/gs2.png)
 
 2.  Click on **Subscriptions** tile.
 
-![A screenshot of a computer AI-generated content may be
+     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image5.png)
 
 3.  Click on the subscription name.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image6.png)
+     ![A screenshot of a computer AI-generated content may be
+incorrect.](./media/135.png)
 
 4.  Expand Settings from the left navigation menu. Click on **Resource
-    providers**, enter **+++** **Microsoft.CognitiveServices+++** and
-    select i,t, and then click **Register**.
+    providers**, enter  **Microsoft.CognitiveServices** and
+    select it, and then click **Register**.
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image7.png)
+     ![](./media/143.png)
 
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image8.png)
+     ![](./media/image8.png)
 
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image9.png)
+     ![](./media/image9.png)
 
 5.  Repeat the steps \#4 to register the following Resource provider.
 
-- +++**Microsoft.AlertsManagement**+++
+    - **Microsoft.AlertsManagement**
 
-## Task 2: Retrieve resource group name and location
-
-1.  Type in +++**Resource group+++** in the search bar and
-    select **Resource groups**.
-
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image10.png)
-
-2.  Click on your assigned **Resource group**.
-
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image11.png)
-
-3.  In **Resource group** page, copy **resource group name and
-    location** and paste them in a notepad, then **Save** the notepad to
-    use the information in the upcoming tasks.
-
-> ![A screenshot of a computer AI-generated content may be
-> incorrect.](./media/image12.png)
-
-## Task 3: Open Github Codespaces environment
+## Task 2: Open Github Codespaces environment
 
 1.  Open your browser, navigate to the address bar, type or paste the
     following URL: 
-    +++https://github.com/technofocus-pte/Banking-assistant-Agent+++
 
-![](./media/image13.png)
+    https://github.com/technofocus-pte/Banking-assistant-Agent+
+
+     ![](./media/image13.png)
 
 2.  Click on **fork** to fork the repo. Give unique name to the repo and
     click on **Create repo** button.
 
-![](./media/image14.png)
+    > **Note:** For this task, you are required to use your personal GitHub account.
 
-![](./media/image15.png)
+     ![](./media/image14.png)
+
+     ![](./media/image15.png)
 
 3.  Click on **Code -\> Codespaces -\> Codespaces+**
 
-> ![](./media/image16.png)
+      ![](./media/image16.png)
 
 4.  Wait for the Codespaces environment to setup .It takes few minutes
     to setup completely
 
-> ![](./media/image17.png)
->
-> ![](./media/image18.png)
+     ![](./media/image17.png)
 
-## Task 4: Provision Services and deploy application to Azure
+     ![](./media/image18.png)
+
+## Task 3: Provision Services and deploy application to Azure
 
 1.  Run the following command on the Terminal. It generates the code to
     copy. Copy the code and press Enter.
 
-+++azd auth login+++
+    ```
+    azd auth login
+    ```
 
-![](./media/image19.png)
+     ![](./media/image19.png)
 
-![](./media/image20.png)
+     ![](./media/image20.png)
 
 2.  Default browser opens to enter the generated code to verify. Enter
     the code and click **Next**.
 
-![](./media/image21.png)
+     ![](./media/image21.png)
 
 3.  Sign in with your Azure credentials.
 
-![A screenshot of a computer AI-generated content may be
+     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image22.png)
 
-![A screenshot of a computer error AI-generated content may be
+     ![A screenshot of a computer error AI-generated content may be
 incorrect.](./media/image23.png)
 
-![](./media/image24.png)
+     ![](./media/image24.png)
 
 4.  To create an environment for Azure resources, run the following
     Azure Developer CLI command.It asks you to enter environment name.
     Enter any name of your choice and press enter (eg
-    :+++BankagentXXXX+++)
+    :Bankagent1234)
 
-+++azd env new+++
+    ```
+    azd env new
+    ```
 
-![](./media/image25.png)
-
-5.  Run below command to provision the services to Azure, build your
-    container.
-
-+++azd env set AZURE_RESOURCE_GROUP {Name of existing resource group}+++
-
-![](./media/image26.png)
+     ![](./media/image25.png)
 
 6.  Run azd up - This will provision Azure resources
 
-+++azd up+++
+    ```
+    azd up
+    ```
 
-![](./media/image27.png)
+    ![](./media/image27.png)
 
 5.  Select below values.
 
-- **Select an Azure Subscription to use** : Select your subscription
+     - **Select an Azure Subscription to use** : Select your subscription
 
-- **azureAiServiceLocation**: France Central or Sweden Central
+        ![](./media/image28.png)
 
-- **‘location' infrastructure parameter:** Central US
+     - **azureAiServiceLocation**: France Central or Sweden Central
 
-- **Pick a resource group to use:** Existing resource group
+     - **‘location' infrastructure parameter:** Central US
 
-![](./media/image28.png)
+1. After selecting subscription and location please **Create a New resource group**.
 
-![](./media/image29.png)
+    - Resource Group Name : **newagent-rg**
 
+    - Location : **Central US**
 6.  This deployment will take *7-10 minutes* to provision the resources
     in your account and set up the solution with sample data.
 
-![](./media/image30.png)
+     ![](./media/image30.png)
 
-![](./media/image31.png)
+     ![](./media/image31.png)
 
-![](./media/image32.png)
+     ![](./media/image32.png)
 
-![](./media/image33.png)
+     ![](./media/image33.png)
 
-![](./media/image34.png)
+     ![](./media/image34.png)
 
 7.  The service account endpoint has been completed successfully.
 
-![](./media/image35.png)
+     ![](./media/image35.png)
 
-![](./media/image36.png)
+     ![](./media/image36.png)
 
 8.  The service backend has been completed successfully.
 
-![](./media/image37.png)
+     ![](./media/image37.png)
 
 9.  The service payment has been completed successfully.
 
-![](./media/image38.png)
+     ![](./media/image38.png)
 
 10. The service transaction has been completed successfully.
 
-![](./media/image39.png)
+     ![](./media/image39.png)
 
 11. The service web has been completed successfully.
 
-![](./media/image40.png)
+     ![](./media/image40.png)
 
-## Task 5: Verify deployed resources in the Azure portal
+## Task 4: Verify deployed resources in the Azure portal
 
 1.  Select **Resource groups**
 
-![A screenshot of a computer AI-generated content may be
+     ![A screenshot of a computer AI-generated content may be
 incorrect.](./media/image41.png)
 
-2.  Click on your assigned **Resource group**.
-
-![A screenshot of a computer AI-generated content may be
-incorrect.](./media/image42.png)
+2.  Click on your assigned Resource group **newagent-rg**.
 
 3.  Make sure all the resources got deployed successfully
 
-![](./media/image43.png)
+     ![](./media/image43.png)
 
-![](./media/image44.png)
+     ![](./media/image44.png)
 
 3.  Make sure the below resource got deployed successfully
 
-- Foundry
+     - Foundry
 
-- Foundry project
+     - Foundry project
 
-- Account Container App
+     - Account Container App
 
-- Backend Container App
+     - Backend Container App
 
-- Payment Container App
+     - Payment Container App
 
-- Transaction Container App
+     - Transaction Container App
 
-- Web Container App
+     - Web Container App
 
-- Document Intelligence
+     - Document Intelligence
 
-- Container App Environment
+     - Container App Environment
 
-- Azure Cosmos DB account
+     - Azure Cosmos DB account
 
-- Search service
+     - Search service
 
-- Azure Storage account
+     - Azure Storage account
 
-![](./media/image45.png)
+       ![](./media/image45.png)
 
 4.  Select **Foundry project**
 
-> ![](./media/image46.png)
+     ![](./media/image46.png)
 
 6.  Click **Go to Foundry portal** to verify that the model has been
     successfully deployed.
 
-![](./media/image47.png)
+     ![](./media/image47.png)
 
 5.  In Microsoft Foundry, navigate to the **Build** section from the top
     menu to start creating and managing your AI solutions.
 
-![](./media/image48.png)
+     ![](./media/image48.png)
 
-## **Task 6:** **Test the Application**
+## Task 5: Test the Application
 
 1.  Click on the generated **service web endpoint URL** to open and
     access the deployed application in your browser.
 
-![](./media/image49.png)
+     ![](./media/image49.png)
 
 2.  Click on **Open** button
 
-![](./media/image50.png)
+     ![](./media/image50.png)
 
 3.  Click on **Start banking**
 
-![](./media/image51.png)
+     ![](./media/image51.png)
 
-![](./media/image52.png)
+     ![](./media/image52.png)
 
 4.  On the Banking Assistant home page, select **Transaction Analysis**
     to view and analyze transaction details.
 
-![](./media/image53.png)
+     ![](./media/image53.png)
 
 5.  Select **Start Chat** to initiate a conversation with the Banking
     Assistant.
 
-![](./media/image54.png)
+     ![](./media/image54.png)
 
 6.  Click **Review Card Spend** to analyze and review card transaction
     spending details.
 
-![](./media/image55.png)
+     ![](./media/image55.png)
 
-![](./media/image56.png)
+     ![](./media/image56.png)
 
-![](./media/image57.png)
+     ![](./media/image57.png)
 
-![](./media/image58.png)
+     ![](./media/image58.png)
 
-## Task 7: Delete the resources
+## Task 6: Delete the resources
 
-1.  From the Azure portal home page, select the assigned Resouce group.
+1.  From the Azure portal home page, select the assigned Resouce group **newagent-rg**
     Select all the resources under the Resource group and select Delete.
 
-![A screenshot of a computer Description automatically
-generated](./media/image59.png)
+     ![A screenshot of a computer Description automatically
+generated](./media/144.png)
 
-2.  Enter +++**delete**+++ and click on the **Delete** button to confirm
+2.  Enter **delete** and click on the **Delete** button to confirm
     deletion. Click on **Delete** in the Delete confirmation dialog box.
 
-![A screenshot of a computer Description automatically
+     ![A screenshot of a computer Description automatically
 generated](./media/image60.png)
 
 3.  Confirm the deletion of all the resources with a success message.
 
-![A screenshot of a computer screen Description automatically
+     ![A screenshot of a computer screen Description automatically
 generated](./media/image61.png)
 
 **Summary**
