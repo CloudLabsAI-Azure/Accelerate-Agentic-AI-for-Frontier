@@ -2,39 +2,39 @@
 
 # Trust, Security, and Control for Enterprise AI Agents
 
-### Overall Estimated Duration: 4 Hours
+## Overall Estimated Duration: 4 Hours
 
 ## Getting Started with the lab
 
-Welcome to your Azure AI Agents Workshop, Let's begin by making the most of this experience.
-
-## Accessing Your Lab Environment
-
-Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
-
-![Access Your VM and Lab Guide](media/guideee.png)
-
-## Lab Guide Zoom In/Zoom Out
-
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-![](./media/zum.png)
+Welcome to your Accelerate Agentic AI for Frontier Workshop, Let's begin by making the most of this experience.
 
 ## Virtual Machine & Lab Guide
 
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
 
+## Accessing Your Lab Environment
+
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
+
+![Access Your VM and Lab Guide](media/gs0.png)
+
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![](./media/gs1.png)
+
 ## Exploring Your Lab Resources
 
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![Explore Lab Resources](media/envtab.png)
+![Explore Lab Resources](./media/envtab.png)
 
 ## Utilizing the Split Window Feature
 
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
-![Use the Split Window Feature](media/splittt.png)
+![Use the Split Window Feature](./media/splittt.png)
 
 ## Managing Your Virtual Machine
 
@@ -56,13 +56,13 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
    - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-     ![Enter Your Password](../media/password.png)
+     ![Enter Your Password](./media/password.png)
 
       >**Note:** If you see **Temporary Access pass**, enter the the password and select **Sign In (2)**:
 
        - Enter **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
 
-          ![](media/image.png)
+          ![](./media/image.png)
 
 4. If **Action required** pop-up window appears, click on **Ask later**.
 5. If prompted to **stay signed in**, you can click **No**.
@@ -102,6 +102,6 @@ Learner Support Contacts:
 
 Click **Next** from the bottom right corner to embark on your Lab journey!
 
-![Start Your Azure Journey](../media/PageNo.png)
+![Start Your Azure Journey](./media/PageNo.png)
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
