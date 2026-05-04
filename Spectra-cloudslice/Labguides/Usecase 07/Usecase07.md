@@ -1,6 +1,6 @@
 # Use case 7 - Centralized AI agent governance and observability using Foundry Control Plane
 
-**Introduction**
+## Introduction
 
 In modern AI-driven applications, managing multiple AI agents, ensuring their reliability, and maintaining visibility into their behavior is essential. This scenario focuses on implementing centralized governance and observability using Microsoft Foundry Control Plane. The lab walks through the complete lifecycle of AI agents—from creation and configuration to monitoring, evaluation, and security testing. By leveraging built-in capabilities such as tracing, Application Insights integration, evaluation frameworks, and red teaming, this use case demonstrates how organizations can build AI systems that are transparent, secure, and production-ready. The Contoso Travel scenario serves as a practical example to illustrate how intelligent agents can be governed and observed effectively within a unified platform.
 
